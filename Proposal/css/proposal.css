@@ -1,6 +1,7 @@
 body {
-    background-color:#d2e7d6;
+    background-color:#e1f7e5;
     font-family: sans-serif;
+    padding: 1em;
   }
 
 h1{
@@ -18,3 +19,4 @@ a {
 p, strong, ul {
     color:#274e13;
 }
+
