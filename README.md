@@ -12,16 +12,16 @@ This document provides a high-level overview of the plant care web application, 
 
 This web application aims to empower individuals of all experience levels to thrive in the world of houseplants.  With a focus on user-friendliness and clear information, the app offers:
 
--Educational Resources: Comprehensive information on houseplant care, tailored to specific plant types.
-
--Personalized Care Plans: Generate custom care schedules based on user input and local conditions.
-
--Interactive Features: Flashcards, plant journals, and a community forum to enhance learning and engagement.
+        -Educational Resources: Comprehensive information on houseplant care, tailored to specific plant types.
+        
+        -Personalized Care Plans: Generate custom care schedules based on user input and local conditions.
+        
+        -Interactive Features: Flashcards, plant journals, and a community forum to enhance learning and engagement.
 
 This app caters to anyone interested in nurturing houseplants, including:
 
--Beginners taking their first steps in plant parenthood.
-
--Experienced plant owners seeking to refresh their knowledge.
-
--Individuals wanting to improve their living environment with greenery.
+        -Beginners taking their first steps in plant parenthood.
+        
+        -Experienced plant owners seeking to refresh their knowledge.
+        
+        -Individuals wanting to improve their living environment with greenery.
