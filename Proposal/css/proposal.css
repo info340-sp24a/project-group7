@@ -1,0 +1,20 @@
+body {
+    background-color:#d2e7d6;
+    font-family: sans-serif;
+  }
+
+h1{
+    text-align:center;
+}
+
+h1, h2 {
+    color:#1c380d;
+}
+
+a {
+    color: inherit;
+}
+
+p, strong, ul {
+    color:#274e13;
+}
