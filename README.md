@@ -2,7 +2,7 @@
 
 This repository contains code for an interactive information web app, created for the _Client-Side Web Development_ course at the UW iSchool.
 
-***Group Members:*** Vy Tran-Nguyen, Chantria Im, Elroe, Lyrisse Faith Samson
+***Group Members:*** Vy Tran-Nguyen, Chantria Im, Elroe Yayiso, Lyrisse Faith Samson
 
 ***Welcome to the Plant Parenthood App!***
 
