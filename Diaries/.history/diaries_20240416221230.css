@@ -13,6 +13,15 @@ h2 {
 h3 {
     color: white /* Change 'blue' to any color you prefer */
   }
+  
+/* Style for the square border */
+.square-border {
+    display: inline-block; /* Ensures the container only takes the necessary space */
+    padding: 5px 10px; /* Adds padding around the text */
+    border: 2px solid black; /* Adds a border with solid black color */
+    border-radius: 5px; /* Rounds the corners */
+  }
+
 
   
 /* Style for navigation bar */
@@ -23,7 +32,7 @@ h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 3px solid gray;
+    border: 1px solid gray;
     padding: 10px;
 }
 
@@ -52,12 +61,10 @@ h3 {
 
 /* Style for side box */
 .side-box {
-    width: 40%; /* Increased width */
+    width: 30%;
     background-color: #C2C5AA;
-    padding: 50px; /* Increased padding */
-    margin-top: 40px;
-    border: 3px solid gray; /* Added border */
-    border-radius: 20px; /* Added border radius for rounded corners */
+    padding: 30px;
+    margin-top: 100px; /* Add margin-top */
 }
 
 .side-box h2 {
@@ -67,7 +74,7 @@ h3 {
 .side-box textarea {
     width: 100%;
     height: 350px;
-    margin-bottom: 0px;
+    margin-bottom: 10px;
 }
 
 .side-box input[type="file"] {
@@ -92,12 +99,8 @@ h3 {
     height: 700px;
     background-color: #C2C5AA;
     padding: 20px;
-    border: 3px solid gray; /* Added border */
-    border-radius: 20px; /* Added border radius for rounded corners */
-    margin-top: 40px;
 }
 
 .square-box h2 {
     margin-bottom: 10px;
-
 }
