@@ -1,0 +1,44 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    color: white /* Change 'blue' to any color you prefer */
+  }
+
+
+h3 {
+    color: white /* Change 'blue' to any color you prefer */
+  }
+
+  
+/* Style for navigation bar */
+.navbar {
+    background-color: #C2C5AA; 
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 3px solid gray;
+    padding: 10px;
+}
+
+
+.navbar ul {
+    list-style-type: none;
+}
+
+.navbar ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+}
