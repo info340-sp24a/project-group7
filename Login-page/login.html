@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Plant Parenthood</h1>
+    </nav>
+
+  <div class="container">
+    <div class="login-section">
+      <div class="form-container">
+        <!--<h2>Login</h2> -->
+        <p class="welcome-message">Good to see you again</p>
+        <p class="message">Ready to check on your plants?</p>
+        <form>
+            <!-- Reference: https://www.w3schools.com/howto/howto_css_login_form.asp -->
+          <div>
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" required>
+          </div>
+          <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+          <button type="submit">Login</button>
+          <div class="remember-container">
+            <span class="remember"> <a href = "#">Remember me!</a></span>
+            <span class="forgot-password">Forgot <a href="#">password?</a></span>
+          </div>
+        </form>
+        <p class="signup-message">Don't have an account? <a href="#">Sign up here</a></p>
+      </div>
+    </div>
+    <div class="image-section">
+      <img src="../Login-page/img/monstera.jpg" alt="Monstera Plant">
+    </div>
+  </div>
+</body>
+</html>
