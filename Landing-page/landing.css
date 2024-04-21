@@ -1,22 +1,47 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-  
-  /* Style for navigation bar */
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Readex Pro';
+}
+
+footer {
+color: #6C584C;
+position: absolute;
+bottom: 0;
+}
+
+h2 {
+  color: white /* Change 'blue' to any color you prefer */
+}
+
+
+h3 {
+  color: white /* Change 'blue' to any color you prefer */
+}
+
+/* Style for navigation bar */
 .navbar {
-  background-color: #C2C5AA; 
-  color: #fff;
+  background-color: #ffffff; 
+  color: #5C8444;
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 3px solid gray;
   padding: 10px;
 }
 
-.navbar ul {
-  list-style-type: none;
+.navbar .pages {
+ list-style-type: none;
+ position: relative;
+ left: 1px;
+ font-size: 12px;
+}
+
+.navbar .profile {
+list-style-type: none;
+font-size: 12px;
 }
 
 .navbar ul li {
@@ -26,21 +51,55 @@ body {
 
 .navbar ul li a {
   text-decoration: none;
-  color: #fff;
+  color: #6C584C;
   font-size: 17px;
 }
 
-  .container {
-    display: flex;
-    flex-direction: row;
-    height: 100vh;
-  }
-  
-  .login-section {
-    width: 50%;
-    padding: 20px;
-    background-color: #f2f2f2;
-  }
+.hero {
+  height: 100vh;
+  background-image: url('img/houseplants6.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 60vh;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  color: #538444;
+  margin-bottom: 50px;
+}
+
+.hero-content p {
+  font-size: 24px;
+  color: #538444;
+  margin-bottom: 10px;
+  line-height: 1.5;
+  max-width: 500px;
+}
+
+.hero-content button {
+  padding: 12px 24px;
+  font-size: 18px;
+  background-color: #538444;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.hero-content button:hover {
+  background-color: #406c35;
+}
   
   .image-section {
     width: 50%;
