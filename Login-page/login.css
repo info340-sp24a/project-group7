@@ -1,39 +1,71 @@
-body {
+/* Reset default margin and padding */
+* {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Readex Pro';
+}
+
+footer {
+color: #6C584C;
+position: absolute;
+bottom: 0;
+}
+
+h2 {
+  color: white /* Change 'blue' to any color you prefer */
+}
+
+
+h3 {
+  color: white /* Change 'blue' to any color you prefer */
+}
+
+/* Style for navigation bar */
+.navbar {
+  background-color: #ffffff; 
+  color: #5C8444;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+h1 {
+position:absolute;
+left:45%;
+text-align:center;
+
+}
+
+.navbar .pages {
+ list-style-type: none;
+ position: relative;
+ left: 1px;
+ font-size: 12px;
+}
+
+.navbar .profile {
+list-style-type: none;
+font-size: 12px;
+}
+
+.navbar ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #6C584C;
+  font-size: 17px;
 }
 
 .container {
   display: flex;
   height: 100vh;
 }
-
-  /* Style for navigation bar */
-  .navbar {
-    background-color: #C2C5AA; 
-    color: #fff;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 3px solid gray;
-    padding: 10px;
-  }
-  
-  .navbar ul {
-    list-style-type: none;
-  }
-  
-  .navbar ul li {
-    display: inline;
-    margin-right: 20px;
-  }
-  
-  .navbar ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 17px;
-  }
 
 .welcome-message {
   font-size: 40px;
