@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>My Web Page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="calender.css">
@@ -14,6 +14,10 @@
   
     <!-- Navigation bar -->
     <nav class="navbar">
+      <!-- Menu for smaller screens -->
+      <div class="hamburger-btn">
+        <i class="fas fa-bars"></i>
+      </div>  
     <!-- Pages -->
     <div class="pages">
     <ul>
@@ -23,6 +27,7 @@
         <li><a href="Info.html">Plant Info </a></li>
       </ul> 
     </div>
+
       <!-- Title -->
       <h1>Plant Parenthood</h1>
       <!-- Profile -->
@@ -75,7 +80,7 @@
             <div class="event-date">19th April 2024</div>
           </div>
           <div class="events"></div>
-          <!-- Will add task form -->
+          <!-- Will add task form with js -->
         </div>
         <button class="add-event">
           <i class="fas fa-plus"></i>
