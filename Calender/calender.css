@@ -6,6 +6,12 @@
     font-family: 'Readex Pro';
 }
 
+footer {
+  color: #6C584C;
+  position: absolute;
+  bottom: 0;
+}
+
 h2 {
     color: white /* Change 'blue' to any color you prefer */
   }
@@ -62,7 +68,7 @@ h1 {
     justify-content: space-between;
     margin: 20px;
     width: 1000px;
-    min-height: 640px;
+    min-height: 700px;
     position: absolute;
     left: -30px;
     background: rgba(221, 229, 182, 0.27);
