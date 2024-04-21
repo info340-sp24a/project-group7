@@ -15,21 +15,34 @@ h3 {
     color: white /* Change 'blue' to any color you prefer */
   }
 
-  
 /* Style for navigation bar */
 .navbar {
-    background-color: #C2C5AA; 
-    color: #fff;
+    background-color: #ffffff; 
+    color: #5C8444;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 3px solid gray;
     padding: 10px;
 }
 
-.navbar ul {
-    list-style-type: none;
+h1 {
+  position:absolute;
+  left:45%;
+  text-align:center;
+
+}
+
+.navbar .pages {
+   list-style-type: none;
+   position: relative;
+   left: 1px;
+   font-size: 12px;
+}
+
+.navbar .profile {
+  list-style-type: none;
+  font-size: 12px;
 }
 
 .navbar ul li {
@@ -39,7 +52,7 @@ h3 {
 
 .navbar ul li a {
     text-decoration: none;
-    color: #fff;
+    color: #6C584C;
     font-size: 17px;
 }
 
@@ -48,12 +61,11 @@ h3 {
     display: flex;
     justify-content: space-between;
     margin: 20px;
-    background-color: #dde5b6;
     width: 1000px;
-    min-height: 850px;
+    min-height: 640px;
     position: absolute;
     left: -30px;
-    background-color: #C2C5AA;
+    background: rgba(221, 229, 182, 0.27);
     padding: 50px; /* Increased padding */
     margin-top: 40px;
     border-radius: 20px; /* Added border radius for rounded corners */
@@ -71,7 +83,7 @@ h3 {
    color: #5C8444;
    border-radius: 5px;
    padding: 20px 5px 20px 20px;
-   background-color: #fff;
+   
   }
 
   .calendar .header {
