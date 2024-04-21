@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Style for navigation bar */
+.navbar {
+  background-color: #C2C5AA; 
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 3px solid gray;
+  padding: 10px;
+}
+
+.navbar ul {
+  list-style-type: none;
+}
+
+.navbar ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 17px;
+}
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+  }
+  
+  .login-section {
+    width: 50%;
+    padding: 20px;
+    background-color: #f2f2f2;
+  }
+  
+  .image-section {
+    width: 50%;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+#about {
+    background-color: #e9edc9;
+    line-height: 1.5;
+}
