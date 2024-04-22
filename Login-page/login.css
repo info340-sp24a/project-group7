@@ -5,22 +5,18 @@
 
 .welcome-message {
   font-size: 40px;
-  width: 471px;
-  height: 60px;
-  font-weight: 800; 
+  font-weight: 800;
   color: #538444;
-  position: absolute;
   top: 100px;
+  text-align: center;
 }
 
 .message {
   font-size: 15px;
-  width: 255px;
-  height: 20px;
   font-weight: 800;
   color: #adc178;
-  position: absolute;
   top: 170px;
+  text-align: center;
 }
 
 .email {
@@ -28,11 +24,11 @@
   width: 50px;
   height: 20px;
   font-weight: 800;
-  color:#538444
+  color:#538444;
 }
 
 .login-section {
-  width: 50%;
+  width: 65%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,10 +36,21 @@
 }
 
 .form-container {
-  max-width: 400px;
+  max-width: 600px;
   margin: 0 auto;
 }
-.login-input-text {
+.login-input-text-email {
+  width: 100%;
+  border: 0;
+  font-size: 16px;
+  padding: 15px;
+  margin-top: 35px;
+  margin-bottom: 5px;
+  color: #538444;
+  border-bottom: 2px solid #538444;
+  background-color: #fbfff9;
+}
+.login-input-text-password {
   width: 100%;
   border: 0;
   font-size: 16px;
@@ -60,7 +67,7 @@
 }
 
 .image-section {
-  width: 50%;
+  width: 35%;
   height: 100%;
   position: relative;
   overflow: hidden;
@@ -79,11 +86,22 @@
   color: #ADC178;
   display: flex;
   justify-content: space-between;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+.remember-checkbox {
+  accent-color: #ADC178;
 }
 
 .remember-container a{
   color: #ADC178;
   text-decoration: none;
+}
+
+.login-footer {
+  width: fit-content;
+  text-align: center;
 }
 
 button {
@@ -102,9 +120,81 @@ button {
 
 .signup-message{
   color: #ADC178;
-
+  text-align: center;
+  margin-top: 15px;
 }
 .signup-message a {
   color: #ADC178;
+}
+
+/* Media query for small screens (phones) */
+@media (max-width: 576px) {
+  
+  .navbar .pages {
+    display: none;
+  }
+
+  .navbar .profile {
+    display: none;
+  }
+
+  .navbar .hamburger-btn {
+    display: block;
+  }
+
+  .main-content {
+    width: 400px;
+  }
+
+  .tasks {
+    display: none;
+  }
+
+  .image-section {
+    display: none;
+  }
+
+  .login-section{
+    width: 100%;
+  }
+  
+}
+
+/* Media query for medium screens (tablets) */
+@media (min-width: 577px) and (max-width: 992px) {
+  .navbar .pages {
+    display: none;
+  }
+
+  .navbar .profile {
+    display: none;
+  }
+
+  .navbar .hamburger-btn {
+    display: block;
+  }
+
+  .main-content {
+    width: 400px;
+  }
+  .tasks {
+    display: none;
+  }  
+
+  .image-section {
+    display: none;
+  }
+
+  .login-section{
+    width: 100%;
+  }
 
 }
+  
+  /* Media query for medium and large screens */
+@media (min-width: 992px) {
+    .hamburger-btn {
+      display: none;
+    }
+}
+ 
