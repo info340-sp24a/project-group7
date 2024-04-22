@@ -1,0 +1,73 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Readex Pro';
+  }
+  
+  footer {
+    text-align: center; /* Center the text */
+    background-color: #f2f2f2; /* Background color for the footer */
+    padding: 20px; /* Add some padding for better readability */
+    color: white;
+}
+
+  
+  h2 {
+    color: white /* Change 'blue' to any color you prefer */
+  }
+  
+  
+  h3 {
+    color: white /* Change 'blue' to any color you prefer */
+  }
+  
+  /* Style for navigation bar */
+  .navbar {
+    background-color: #ffffff; 
+    color: #5C8444;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .navbar .hamburger-btn {
+  color: #6C584C;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+  }
+  
+  h1 {
+  position:absolute;
+  left:45%;
+  text-align:center;
+  
+  }
+  
+  .navbar .pages {
+   list-style-type: none;
+   position: relative;
+   left: 1px;
+   font-size: 12px;
+  }
+  
+  .navbar .profile {
+  list-style-type: none;
+  font-size: 12px;
+  }
+  
+  .navbar ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  .navbar ul li a {
+    text-decoration: none;
+    color: #6C584C;
+    font-size: 17px;
+  }
+  

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Page</title>
+    <link rel="stylesheet" href="diaries.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <h1>Plant Parenthood</h1>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="calender.html">Calendar</a></li>
+            <li><a href="diaries.html">Diary</a></li>
+            <li><a href="Info.html">Plant Info</a></li>
+        </ul> 
+    </nav>
+
+    <img src="img/green.png" alt="Image" alt="Image" style="width: 1200px; height: 200px;"> 
+    
+  
+
+       
+
+   <!--  <p> <a href="http://127.0.0.1:5500/Diaries/recent.html">Recent</a> </p> -->
+
+    <!-- Main content area -->
+    <div class="main-content">
+        <!-- Side box for notes and photo upload -->
+        <aside class="side-box">
+            <h2>Add Notes & Upload Photos</h2>
+            <!-- Form for adding notes and uploading photos -->
+            <form>
+                <textarea id="noteTextArea" placeholder="Enter your notes here..."></textarea>
+                <input type="file" accept="image/*">
+                <button type="submit">Add Note</button>
+            </form>
+        </aside>
+
+
+    <!-- JavaScript for transferring notes -->
+    <script src="script.js"></script>
+</body>
+</html>

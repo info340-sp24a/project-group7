@@ -1,0 +1,125 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2,
+h3 {
+    color: white; /* Change 'white' to any color you prefer */
+}
+
+p,
+a {
+    text-align: center;
+    margin-top: 70px; /* Adjust the value as needed */
+}
+
+a {
+    color: blue; /* Link color */
+    text-decoration: none; /* Remove underline */
+    text-align: center;
+}
+
+/* Style for navigation bar */
+.navbar {
+    background-color: white;
+    color: #fff;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 3px solid #549f54;
+}
+
+.navbar ul {
+    list-style-type: none;
+}
+
+.navbar ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #65451F;
+    font-size: 17px;
+    font-family:fantasy
+}
+
+
+h1 {
+    color: #65451F; /* Dark green color */
+    font-family: fantasy;
+}
+
+
+/* Main content area */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    margin: 200px;
+}
+
+/* Style for side box */
+
+.side-box {
+    position: absolute;
+    top: 50%; /* Adjust the percentage as needed */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0%; /* Adjust width as needed */
+    background-color: rgba(194, 197, 170, 0.8);
+    padding: 20px; /* Adjust padding as needed */
+    border: 3px solid #416D19;
+    border-radius: 20px;
+    margin-top: 50px; /* Adjust the top margin as needed */
+}
+
+
+.side-box textarea {
+    width: 100%;
+    height: 350px;
+    margin-bottom: 10px;
+}
+
+.side-box input[type="file"] {
+    margin-bottom: 10px;
+}
+
+.side-box button {
+    background-color: gray;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.side-box button:hover {
+    background-color: #555;
+}
+
+.side-box h2 {
+    font-family: fantasy;
+    color: #65451F;
+}
+.side-box form {
+    font-family: cursive;
+}
+/* Style for the image */
+.circle img {
+    width: 100%; /* Make the image fill the container */
+    height: 100%;
+    align-items: center;
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    position: relative; /* Add relative positioning */
+}
+
+/* Styles for footer */
+/* Styles for footer */
+/* Styles for footer */
+/* Styles for footer */
+/* Styles for footer */
+/* Styles for footer */
