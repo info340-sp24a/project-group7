@@ -1,0 +1,212 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style for navigation bar */
+.navbar {
+    background-color: white;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 3px solid #ccd5ae;
+}
+
+.navbar ul {
+    list-style-type: none;
+}
+
+.navbar ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #65451F;
+    font-size: 17px;
+    font-family: fantasy;
+}
+
+
+/* plant parenthood title */
+h1 {
+    color: #65451F; /* Dark green color */
+    font-family: fantasy;
+}
+
+
+/* Main content area */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    margin: 200px;
+}
+
+/* Style for side box */
+
+.side-box {
+    position: absolute;
+    top: 50%; /* Adjust the percentage as needed */
+    left: 27%;
+    transform: translate(-50%, -50%);
+    width: 50%; /* Adjust width as needed */
+    height: 80%;
+    background-color: rgba(194, 197, 170, 0.8);
+    padding: 20px; /* Adjust padding as needed */
+    border: 3px solid #a98467;
+    border-radius: 20px;
+    margin-top: 50px; /* Adjust the top margin as needed */
+}
+
+/* sidebox text*/
+.side-box textarea {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 10px;
+}
+
+.side-box input[type="file"] {
+    margin-bottom: 10px;
+}
+
+.side-box button {
+    background-color: gray;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.side-box button:hover {
+    background-color: #555;
+}
+
+.side-box h2 {
+    font-family: fantasy;
+    color: #65451F;
+}
+.side-box form {
+    font-family: cursive;
+}
+
+/* Row and colums*/
+
+.column {
+    display: flex; /* flexbox to arrange rows */
+    flex-direction: column; /* Arrange squares in a column */
+}
+
+.row {
+    display: flex; /* flexbox to changesquares */
+    justify-content: flex-end; /* Align squares to the right within the row */
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background-color:#ccd5ae; 
+    margin: 10px; /* Add some space between squares */
+}
+
+/* title above the squre
+
+.recently-added{
+    text-align: right;
+    margin-top: 40px;
+    margin-right: 80px;
+    color: #828a69;
+}
+
+/* Media query for small screens (phones) */
+@media screen and (max-width: 576px) {
+    /* CSS rules for small screens */
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .side-box {
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .container {
+        top: 250px;
+        right: 10px;
+    }
+
+    .recently-added {
+        text-align: center;
+        margin: 20px 0;
+    }
+}
+
+/* Media query for medium screens (tablets) */
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    /* CSS rules for medium screens */
+    .navbar {
+        justify-content: space-between;
+    }
+
+    .navbar ul li {
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+
+    .side-box {
+        width: 60%;
+        left: 27%;
+        transform: translate(-50%, -50%);
+    }
+
+    .container {
+        top: 200px;
+        right: 20px;
+    }
+
+    .recently-added {
+        text-align: right;
+        margin-top: 40px;
+        margin-right: 80px;
+    }
+}
+
+/* Media query for medium and large screens */
+@media (min-width: 992px) {
+    /* CSS rules for medium and large screens */
+    .navbar {
+        justify-content: space-between;
+    }
+
+    .navbar ul li {
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+
+    .side-box {
+        width: 50%;
+        left: 27%;
+        transform: translate(-50%, -50%);
+    }
+
+    .container {
+        top: 170px;
+        right: 20px;
+    }
+
+    .recently-added {
+        text-align: right;
+        margin-top: 40px;
+        margin-right: 80px;
+    }
+}

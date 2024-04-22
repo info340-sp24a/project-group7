@@ -188,8 +188,10 @@ button {
   .login-section{
     width: 100%;
   }
+
+}
   
-}/* Media query for medium and large screens */
+  /* Media query for medium and large screens */
 @media (min-width: 992px) {
     .hamburger-btn {
       display: none;
