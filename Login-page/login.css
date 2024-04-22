@@ -23,10 +23,6 @@
   top: 170px;
 }
 
-.input-text {
-  width: 100%;
-}
-
 .email {
   font-size: 16px;
   width: 50px;
@@ -47,7 +43,7 @@
   max-width: 400px;
   margin: 0 auto;
 }
-input {
+.login-input-text {
   width: 100%;
   border: 0;
   font-size: 16px;
@@ -62,7 +58,6 @@ input {
 ::placeholder {
   color: #538444;
 }
-
 
 .image-section {
   width: 50%;
@@ -81,16 +76,12 @@ input {
 }
 
 .remember-container {
-  margin: -15px 0 15px ;
-  font-size: .9em;
   color: #ADC178;
   display: flex;
-  justify-content: space-between;  
-  padding-top: 15px;
-  padding-bottom: 15px;
+  justify-content: space-between;
 }
 
-.remember-container label a{
+.remember-container a{
   color: #ADC178;
   text-decoration: none;
 }
