@@ -1,34 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Landing Page</title>
-  <link rel="stylesheet" href="landing.css">
-  <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>My Web Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../Homepage/main.css">
+    <link rel="stylesheet" href="../Landing-page/landing.css">
+    
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap" rel="stylesheet">
+
 </head>
 <body>
+  <header>
     <!-- Navigation bar -->
     <nav class="navbar">
-      <!-- Pages -->
-      <div class="pages">
+      <!-- Menu for smaller screens -->
+      <div class="hamburger-btn">
+        <i class="fas fa-bars"></i>
+      </div>  
+    <!-- Pages -->
+    <div class="pages">
+    <ul>
+        <li><a href="../Homepage/index.html">Home</a></li>
+        <li><a href="../Calender/calender.html">Calender</li>
+        <li><a href="../Diaries/diaries.html">Diary</a></li>
+        <li><a href="../PlantINFO/Info.html">Plant Info </a></li>
+      </ul> 
+    </div>
+
+      <!-- Title -->
+      <h1>Plant Parenthood</h1>
+      <!-- Profile -->
+      <div class="profile">
       <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="calender.html">Calender</li>
-          <li><a href="diaries.html">Diary</a></li>
-          <li><a href="Info.html">Plant Info </a></li>
-        </ul> 
-      </div>
-        <!-- Title -->
-        <h1>Plant Parenthood</h1>
-        <!-- Profile -->
-        <div class="profile">
-        <ul>
-          <li><a href="login.html">Profile</a></li>
-          <li><a href="login.html">Sign Up</a></li>
-        </ul> 
-      </div>
-      </nav>
+        <li><a href="../Login-page/login.html">Profile</a></li>
+        <li><a href="../Login-page/login.html">Sign Up</a></li>
+      </ul> 
+    </div>
+    </nav>
+  </header>
 
       <main>
         <section class="hero">
