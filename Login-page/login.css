@@ -1,67 +1,3 @@
-/* Reset default margin and padding */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Readex Pro';
-}
-
-footer {
-color: #6C584C;
-position: absolute;
-bottom: 0;
-}
-
-h2 {
-  color: white /* Change 'blue' to any color you prefer */
-}
-
-
-h3 {
-  color: white /* Change 'blue' to any color you prefer */
-}
-
-/* Style for navigation bar */
-.navbar {
-  background-color: #ffffff; 
-  color: #5C8444;
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-}
-
-h1 {
-position:absolute;
-left:45%;
-text-align:center;
-
-}
-
-.navbar .pages {
- list-style-type: none;
- position: relative;
- left: 1px;
- font-size: 12px;
-}
-
-.navbar .profile {
-list-style-type: none;
-font-size: 12px;
-}
-
-.navbar ul li {
-  display: inline;
-  margin-right: 20px;
-}
-
-.navbar ul li a {
-  text-decoration: none;
-  color: #6C584C;
-  font-size: 17px;
-}
-
 .container {
   display: flex;
   height: 100vh;
@@ -73,6 +9,8 @@ font-size: 12px;
   height: 60px;
   font-weight: 800; 
   color: #538444;
+  position: absolute;
+  top: 100px;
 }
 
 .message {
@@ -80,7 +18,9 @@ font-size: 12px;
   width: 255px;
   height: 20px;
   font-weight: 800;
-  color: #adc178
+  color: #adc178;
+  position: absolute;
+  top: 170px;
 }
 
 .email {
@@ -96,13 +36,27 @@ font-size: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f2f2f2;
+  background-color: #fbfff9;
 }
 
 .form-container {
   max-width: 400px;
   margin: 0 auto;
-  font-family: 'Poppins', sans-serif;
+}
+.login-input-text {
+  width: 100%;
+  border: 0;
+  font-size: 16px;
+  padding: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: #538444;
+  border-bottom: 2px solid #538444;
+  background-color: #fbfff9;
+}
+
+::placeholder {
+  color: #538444;
 }
 
 .image-section {
@@ -119,4 +73,38 @@ font-size: 12px;
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.remember-container {
+  color: #ADC178;
+  display: flex;
+  justify-content: space-between;
+}
+
+.remember-container a{
+  color: #ADC178;
+  text-decoration: none;
+}
+
+button {
+  background-color: #5C8444;
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+  font-size: 15px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border: 0;
+  border-radius: 10px;
+  width: 100%;
+  padding-bottom: 15px;
+}
+
+.signup-message{
+  color: #ADC178;
+
+}
+.signup-message a {
+  color: #ADC178;
+
 }
