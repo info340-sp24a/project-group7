@@ -40,7 +40,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f2f2f2;
+  background-color: #fbfff9;
 }
 
 .form-container {
@@ -56,7 +56,7 @@ input {
   margin-bottom: 5px;
   color: #538444;
   border-bottom: 2px solid #538444;
-  background-color: #f2f2f2;
+  background-color: #fbfff9;
 }
 
 ::placeholder {
