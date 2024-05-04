@@ -97,7 +97,7 @@ h2 {
 
   .plant-image {
     float: right;
-    margin-right: 300px; /* Adjust as needed */
+    margin-left: 20px; /* Adjust as needed */
 }
 
 .plant-text {
@@ -130,6 +130,4 @@ h2 {
     }
     
   }
-  
-
   

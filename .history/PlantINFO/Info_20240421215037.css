@@ -94,15 +94,20 @@ h2 {
     color: #6C584C;
     font-size: 17px;
   }
-
   .plant-image {
     float: right;
-    margin-right: 300px; /* Adjust as needed */
+    margin-left: 20px; /* Adjust as needed */
 }
 
 .plant-text {
-    float: left;
-    width: calc(100% - 220px); /* Total width minus image width and margin */
+    overflow: hidden; /* Clear the float */
+}
+
+/* Additional styling for consistency */
+.plant-text h2,
+.plant-text h3,
+.plant-text p {
+    margin: 0;
 }
 
 /* mobile screens */
@@ -130,6 +135,4 @@ h2 {
     }
     
   }
-  
-
   

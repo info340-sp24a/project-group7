@@ -95,15 +95,7 @@ h2 {
     font-size: 17px;
   }
 
-  .plant-image {
-    float: right;
-    margin-right: 300px; /* Adjust as needed */
-}
-
-.plant-text {
-    float: left;
-    width: calc(100% - 220px); /* Total width minus image width and margin */
-}
+ 
 
 /* mobile screens */
 
@@ -130,6 +122,4 @@ h2 {
     }
     
   }
-  
-
   

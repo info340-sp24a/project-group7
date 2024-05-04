@@ -39,7 +39,7 @@ h2 {
   }
   
   h2 {
-    color: rgb(255, 255, 255) /* Change 'blue' to any color you prefer */
+    color: rgb(91, 42, 106) /* Change 'blue' to any color you prefer */
   }
   
   
@@ -95,16 +95,6 @@ h2 {
     font-size: 17px;
   }
 
-  .plant-image {
-    float: right;
-    margin-right: 300px; /* Adjust as needed */
-}
-
-.plant-text {
-    float: left;
-    width: calc(100% - 220px); /* Total width minus image width and margin */
-}
-
 /* mobile screens */
 
 @media (max-width: 598px) {
@@ -130,6 +120,4 @@ h2 {
     }
     
   }
-  
-
   
