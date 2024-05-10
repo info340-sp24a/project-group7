@@ -118,16 +118,43 @@ footer {
   transform: scale(1.05);
 }
 
-.days .day.today {
+.days .day-today {
   color: #5C8444;
-  background-color: #fff;
   border: 1px solid #DDE5B6;
+  width: calc(100% / 7 - 10px);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: #DDE5B6;
+  border: 1px solid #DDE5B6;
+  transition: all 0.3s;
 
 }
 
-.days .day.next,
-.days .day.prev {
-  color: #ccc;
+.calendar .days .day:not(.next):not(.prev):hover {
+  color: #DDE5B6;
+  background: #5C8444;
+  transform: scale(1.05);
+}
+
+.days .day-next,
+.days .day-prev {
+  width: calc(100% / 7 - 10px);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #5C8444;
+  background-color: #E9EDC9;
+  border: 1px solid #DDE5B6;
+  transition: all 0.3s;
 }
 
 /* Style for tasks*/
