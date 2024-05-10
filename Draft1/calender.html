@@ -17,10 +17,6 @@
   <header>
     <!-- Navigation bar -->
     <nav class="navbar">
-      <!-- Menu for smaller screens -->
-      <div class="hamburger-btn">
-        <i class="fas fa-bars"></i>
-      </div>  
     <!-- Pages -->
     <div class="pages">
     <ul>
@@ -40,6 +36,33 @@
         <li><a href="login.html">Sign Up</a></li>
       </ul> 
     </div>
+
+     <!-- Menu for smaller screens -->
+     <div class="hamburger-btn">
+      <span style="fas fa-bars" onclick="openNav()">&#9776;</span>
+     <script>
+      function openNav() {
+        document.getElementById("side-nav").style.width = "100%";
+      }
+      
+      function closeNav() {
+        document.getElementById("side-nav").style.width = "0";
+      }
+      </script>
+    </div>  
+
+    <!--Menu for Media Query-->
+    <div id="side-nav"class="mobile-nav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="calender.html">Calender</a></li>
+        <li><a href="diaries.html">Diary</a></li>
+        <li><a href="Info.html">Plant Info </a></li>
+        <li><a href="login.html">Profile</a></li>
+        <li><a href="login.html">Sign Up</a></li>
+      </ul> 
+    </div>
     </nav>
   </header>
 
@@ -47,18 +70,18 @@
     <div class="main-content">
         <div class="calendar">
           <div class="header">
-            <div class="month">April 2024</div>
+            <div class="month">May 2024</div>
             <div class="btns">
               <!-- Today -->
               <div class="btn today">
                 <strong class="today">Today</strong>
               </div>
               <!-- Previous Month -->
-              <div class="btn prev">
+              <div class="btn prev" aria-label="previous month">
                 <i class="fas fa-chevron-left"></i>
               </div>
               <!-- Next Month -->
-              <div class="btn next">
+              <div class="btn next" aria-label="next month">
                 <i class="fas fa-chevron-right"></i>
               </div>
             </div>
@@ -86,7 +109,7 @@
           <div class="events"></div>
           <!-- Will add task form with js -->
         </div>
-        <button class="add-event">
+        <button class="add-event" aria-label="add new task">
           <i class="fas fa-plus"></i>
         </button>
     </div>
@@ -97,6 +120,7 @@
     </footer>  
 
      <!-- JavaScript for days and functionalities -->
+     
      <script src="calender.js"></script>
 
 </body>
