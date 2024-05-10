@@ -5,13 +5,6 @@
     box-sizing: border-box;
     font-family: 'Readex Pro';
   }
-  footer {
-    color: #6C584C;
-    background-color:white; /* Example background color */
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-  }
   
   
   h2 {
