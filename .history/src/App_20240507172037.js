@@ -1,14 +1,14 @@
 import React from 'react';
 import Navbar from './Navbar';
 
-
 const App = () => {
     return (
         <div>
             <Navbar />
-            <footer>
-                <p>&copy; Plant Parenthood</p>
-            </footer>
+            {/* Other content of your application */}
+            <div>
+                {/* Add your other components or content here */}
+            </div>
         </div>
     );
 };
