@@ -7,8 +7,8 @@
     <title>Login | Plant Parenthood</title>
     <link rel="icon" type="image/png" href="../public/img/planticon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="../Homepage/main.css">
+    <link rel="stylesheet" href="login.css">
     
     <!-- font -->
     <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap" rel="stylesheet">
@@ -18,13 +18,17 @@
   <header>
     <!-- Navigation bar -->
     <nav class="navbar">
+      <!-- Menu for smaller screens -->
+      <div class="hamburger-btn">
+        <i class="fas fa-bars"></i>
+      </div>  
     <!-- Pages -->
     <div class="pages">
     <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="calender.html">Calender</a></li>
-        <li><a href="diaries.html">Diary</a></li>
-        <li><a href="Info.html">Plant Info </a></li>
+        <li><a href="../Homepage/index.html">Home</a></li>
+        <li><a href="../Calender/calender.html">Calender</li>
+        <li><a href="../Diaries/diaries.html">Diary</a></li>
+        <li><a href="../PlantINFO/Info.html">Plant Info </a></li>
       </ul> 
     </div>
 
@@ -33,36 +37,8 @@
       <!-- Profile -->
       <div class="profile">
       <ul>
-        <li><a href="login.html">Profile</a></li>
-        <li><a href="login.html">Sign Up</a></li>
-      </ul> 
-    </div>
-
-     <!-- Menu for smaller screens -->
-     <div class="hamburger-btn">
-      <!--Reference: https://www.w3schools.com/howto/howto_js_sidenav.asp-->
-      <span onclick="openNav()">&#9776;</span>
-     <script>
-      function openNav() {
-        document.getElementById("side-nav").style.width = "100%";
-      }
-      
-      function closeNav() {
-        document.getElementById("side-nav").style.width = "0";
-      }
-      </script>
-    </div>  
-
-    <!--Menu for Media Query-->
-    <div id="side-nav"class="mobile-nav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="calender.html">Calender</a></li>
-        <li><a href="diaries.html">Diary</a></li>
-        <li><a href="Info.html">Plant Info </a></li>
-        <li><a href="login.html">Profile</a></li>
-        <li><a href="login.html">Sign Up</a></li>
+        <li><a href="../Login-page/login.html">Profile</a></li>
+        <li><a href="../Login-page/login.html">Sign Up</a></li>
       </ul> 
     </div>
     </nav>
@@ -92,7 +68,7 @@
       </footer>
     </div>
     <div class="image-section">
-      <img src="img/monstera.jpg" alt="Monstera Plant">
+      <img src="../Login-page/img/monstera.jpg" alt="Monstera Plant">
     </div>
   </div>
 </body>
