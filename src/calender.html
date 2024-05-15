@@ -1,103 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="author" content="Chantria Im, Faith Samson, Elroe, Vy Nguyen">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>My Web Page</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="../Homepage/main.css">
-    <link rel="stylesheet" href="calender.css">
-    
-    <!-- font -->
-    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="author" content="Chantria Im, Faith Samson, Elroe, Vy Nguyen">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Calendar | Plant Parenthood</title>
+  <link rel="icon" type="image/png" href="../public/img/planticon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/calender.css">
+
+  <!-- font -->
+  <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap" rel="stylesheet">
 
 </head>
 <body>
   <header>
     <!-- Navigation bar -->
     <nav class="navbar">
-      <!-- Menu for smaller screens -->
-      <div class="hamburger-btn">
-        <i class="fas fa-bars"></i>
-      </div>  
-    <!-- Pages -->
-    <div class="pages">
-    <ul>
-        <li><a href="../Homepage/index.html">Home</a></li>
-        <li><a href="../Calender/calender.html">Calender</li>
-        <li><a href="../Diaries/diaries.html">Diary</a></li>
-        <li><a href="../PlantINFO/Info.html">Plant Info </a></li>
-      </ul> 
-    </div>
+      <!-- Pages -->
+      <div class="pages">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="calender.html">Calender</a></li>
+          <li><a href="diaries.html">Diary</a></li>
+          <li><a href="Info.html">Plant Info </a></li>
+        </ul>
+      </div>
 
       <!-- Title -->
       <h1>Plant Parenthood</h1>
       <!-- Profile -->
       <div class="profile">
-      <ul>
-        <li><a href="../Login-page/login.html">Profile</a></li>
-        <li><a href="../Login-page/login.html">Sign Up</a></li>
-      </ul> 
-    </div>
+        <ul>
+          <li><a href="login.html">Profile</a></li>
+          <li><a href="login.html">Sign Up</a></li>
+        </ul>
+      </div>
+
+      <!-- Menu for smaller screens -->
+      <div class="hamburger-btn">
+        <!--Reference: https://www.w3schools.com/howto/howto_js_sidenav.asp-->
+        <span onclick="openNav()">&#9776;</span>
+        <script>
+          function openNav() {
+            document.getElementById("side-nav").style.width = "100%";
+          }
+
+          function closeNav() {
+            document.getElementById("side-nav").style.width = "0";
+          }
+        </script>
+      </div>
+
+      <!--Menu for Media Query-->
+      <div id="side-nav" class="mobile-nav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="calender.html">Calender</a></li>
+          <li><a href="diaries.html">Diary</a></li>
+          <li><a href="Info.html">Plant Info </a></li>
+          <li><a href="login.html">Profile</a></li>
+          <li><a href="login.html">Sign Up</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
 
-    <!-- Calender -->
-    <div class="main-content">
-        <div class="calendar">
-          <div class="header">
-            <div class="month">April 2024</div>
-            <div class="btns">
-              <!-- Today -->
-              <div class="btn today">
-                <strong class="today">Today</strong>
-              </div>
-              <!-- Previous Month -->
-              <div class="btn prev">
-                <i class="fas fa-chevron-left"></i>
-              </div>
-              <!-- Next Month -->
-              <div class="btn next">
-                <i class="fas fa-chevron-right"></i>
-              </div>
-            </div>
+  <main>
+  <!-- Calender -->
+  <div class="main-content">
+    <div class="calendar">
+      <div class="header">
+        <div class="month">May 2024</div>
+        <div class="btns">
+          <!-- Today -->
+          <div class="btn today">
+            <strong class="today">Today</strong>
           </div>
-          <div class="weekdays">
-            <div class="day">Sun</div>
-            <div class="day">Mon</div>
-            <div class="day">Tue</div>
-            <div class="day">Wed</div>
-            <div class="day">Thu</div>
-            <div class="day">Fri</div>
-            <div class="day">Sat</div>
+          <!-- Previous Month -->
+          <div class="btn prev" aria-label="previous month">
+            <i class="fas fa-chevron-left"></i>
           </div>
-          <div class="days">
-            <!-- Will add days with js -->
+          <!-- Next Month -->
+          <div class="btn next" aria-label="next month">
+            <i class="fas fa-chevron-right"></i>
           </div>
         </div>
+      </div>
+      <div class="weekdays">
+        <div class="day">Sun</div>
+        <div class="day">Mon</div>
+        <div class="day">Tue</div>
+        <div class="day">Wed</div>
+        <div class="day">Thu</div>
+        <div class="day">Fri</div>
+        <div class="day">Sat</div>
+      </div>
+      <div class="days">
+        <!--Previous month days-->
+        <div class="day-prev">28</div>
+        <div class="day-prev">29</div>
+        <div class="day-prev">30</div>
 
-         <!-- Tasks --> 
-         <div class="tasks">
-          <div class="today-date">
-            <div class="event-day">Fri</div>
-            <div class="event-date">19th April 2024</div>
-          </div>
-          <div class="events"></div>
-          <!-- Will add task form with js -->
-        </div>
-        <button class="add-event">
-          <i class="fas fa-plus"></i>
-        </button>
+        <!--Current month days-->
+        <div class="day">1</div>
+        <div class="day">2</div>
+        <div class="day">3</div>
+        <div class="day">4</div>
+        <div class="day">5</div>
+        <div class="day">6</div>
+        <div class="day">7</div>
+        <div class="day">8</div>
+        <div class="day">9</div>
+        <div class="day-today">10</div>
+        <div class="day">11</div>
+        <div class="day">12</div>
+        <div class="day">13</div>
+        <div class="day">14</div>
+        <div class="day">15</div>
+        <div class="day">16</div>
+        <div class="day">17</div>
+        <div class="day">18</div>
+        <div class="day">19</div>
+        <div class="day">20</div>
+        <div class="day">21</div>
+        <div class="day">22</div>
+        <div class="day">23</div>
+        <div class="day">24</div>
+        <div class="day">25</div>
+        <div class="day">26</div>
+        <div class="day">27</div>
+        <div class="day">28</div>
+        <div class="day">29</div>
+        <div class="day">30</div>
+        <div class="day">31</div>
+
+        <!--Next month days-->
+        <div class="day-next">1</div>
+        <div class="day-next">2</div>
+        <div class="day-next">3</div>
+
+
+      </div>
     </div>
 
-    <!-- copyright -->
-    <footer>
-      <p>&copy; Plant Parenthood</p>
-    </footer>  
+    <!-- Tasks -->
+    <div class="tasks">
+      <div class="today-date">
+        <div class="event-day">Fri</div>
+        <div class="event-date">10th May 2024</div>
+      </div>
+      <div class="events"></div>
 
-     <!-- JavaScript for days and functionalities -->
-     <script src="calender.js"></script>
 
+      <!-- Button -->
+      <div class="button">
+        <a href="#modalbox" class="fas fa-plus"></a>
+      </div>
+
+      <!-- Add Form -->
+      <div id="modalbox" class="modal">
+        <div class="modalcontent">
+
+          <div class="add-event-header">
+            <div class="title">Add Event</div>
+          </div>
+          <div class="add-event-body">
+            <div class="add-event-input">
+              <input type="text" placeholder="Event Name" class="event-name" />
+            </div>
+            <div class="add-event-input">
+              <input type="text" placeholder="Event Time From" class="event-time-from" />
+            </div>
+            <div class="add-event-input">
+              <input type="text" placeholder="Event Time To" class="event-time-to" />
+            </div>
+          </div>
+          <div class="add-event-footer">
+            <button class="add-event-btn">Add Event</button>
+          </div>
+          <a href="#" class="modalclose">&times;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </main>
+
+
+  <!-- copyright -->
+  <footer>
+    <p>&copy; Plant Parenthood</p>
+  </footer>
+
+  <!-- JavaScript for days and functionalities -->
+  <script src="calender.js"></script>
 </body>
+
 </html>
