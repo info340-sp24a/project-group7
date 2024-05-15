@@ -1,0 +1,7 @@
+import React from 'react';
+import '../css/main.css'; // Import the CSS file
+import '../css/calendar.css';
+
+const calendar = () => {};
+
+export default calendar;

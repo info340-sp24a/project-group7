@@ -17,29 +17,53 @@
   <header>
     <!-- Navigation bar -->
     <nav class="navbar">
-      <!-- Menu for smaller screens -->
-      <div class="hamburger-btn">
-        <i class="fas fa-bars"></i>
-      </div>  
-    <!-- Pages -->
-    <div class="pages">
-    <ul>
-        <li><a href="../Homepage/index.html">Home</a></li>
-        <li><a href="../Calender/calender.html">Calender</li>
-        <li><a href="../Diaries/diaries.html">Diary</a></li>
-        <li><a href="../PlantINFO/Info.html">Plant Info </a></li>
-      </ul> 
-    </div>
+      <!-- Pages -->
+      <div class="pages">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="diaries.html">Diary</a></li>
+          <li><a href="Info.html">Plant Info </a></li>
+        </ul>
+      </div>
 
       <!-- Title -->
       <h1>Plant Parenthood</h1>
       <!-- Profile -->
       <div class="profile">
-      <ul>
-        <li><a href="../Login-page/login.html">Profile</a></li>
-        <li><a href="../Login-page/login.html">Sign Up</a></li>
-      </ul> 
-    </div>
+        <ul>
+          <li><a href="login.html">Profile</a></li>
+          <li><a href="login.html">Sign Up</a></li>
+        </ul>
+      </div>
+
+      <!-- Menu for smaller screens -->
+      <div class="hamburger-btn">
+        <!--Reference: https://www.w3schools.com/howto/howto_js_sidenav.asp-->
+        <span onclick="openNav()">&#9776;</span>
+        <script>
+          function openNav() {
+            document.getElementById("side-nav").style.width = "100%";
+          }
+
+          function closeNav() {
+            document.getElementById("side-nav").style.width = "0";
+          }
+        </script>
+      </div>
+
+      <!--Menu for Media Query-->
+      <div id="side-nav" class="mobile-nav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="diaries.html">Diary</a></li>
+          <li><a href="Info.html">Plant Info </a></li>
+          <li><a href="login.html">Profile</a></li>
+          <li><a href="login.html">Sign Up</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
 
