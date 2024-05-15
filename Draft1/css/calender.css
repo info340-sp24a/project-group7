@@ -1,9 +1,21 @@
 /* Style for calender */
+
+
+
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: #6C584C;
+  padding: 10px 0;
+  text-align: center;
+}
 .main-content {
   display: flex;
   justify-content: space-between;
   margin: 20px;
-  width: 70%;
+  width: 90%;
   min-height: 80%;
   position: absolute;
   left: -30px;
@@ -11,14 +23,6 @@
   padding: 50px; /* Increased padding */
   margin-top: 40px;
   border-radius: 20px; /* Added border radius for rounded corners */
-
-}
-
-footer {
-  color: #6C584C;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
 
 }
 
@@ -169,7 +173,7 @@ footer {
 .tasks .today-date {
   position: absolute;
   left: 650px;
-  width: 34%;
+  width: 45%;
   height: 50px;
   display: flex;
   gap: 100px;
@@ -354,7 +358,89 @@ footer {
   color: #fff;
 }
 
+/* mobile screens */
+
+@media (min-width: 320px) and (max-width: 598px){
+ 
+  .main-content {
+    width: 130%;
+    height: 500%;
+  }
+
+  .calendar {
+    left: 0;
+   }
+
+   .tasks .today-date {
+    bottom: 80%;
+    left: 30px;
+    width: 90%;
+   
+}
+
+.button {
+  bottom: 82%;
+  
+}
+
+.modal {
+  position: absolute;
+    height: 100%;
+    bottom: 0;
+}
+
+.modalcontent {
+  position: absolute;
+  top: 5%;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+}
 
 
+}
+
+@media (min-width: 598px) and (max-width: 992px){
+ 
+  .main-content {
+    width: 101%;
+    height: 500%;
+  }
+
+  .calendar {
+ 
+   }
+
+   .tasks .today-date {
+    bottom: 83%;
+    left: 30px;
+    width: 90%;
+   
+}
+
+  .button {
+    bottom: 85%;
+    
+  }
+
+  .modal {
+    position: absolute;
+      height: 100%;
+      bottom: 0;
+  }
+
+  .modalcontent {
+    position: absolute;
+    top: 5%;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+  }
+
+}
 
 

@@ -87,7 +87,7 @@
   }
 
   .navbar h1 {
-    text-align: right;
+    left: 30%;
   }
 
   .mobile-nav {
@@ -126,14 +126,6 @@
 
   .navbar .hamburger-btn {
     display: block;
-  }
-
-  .main-content {
-    width: 400px;
-  }
-
-  .tasks {
-    display: none;
   }
   
 }
@@ -149,7 +141,7 @@
   }
 
   .navbar h1 {
-    text-align: right;
+    text-align: center;
   }
 
   .mobile-nav {
@@ -189,16 +181,6 @@
     display: block;
   }
 
-  .main-content {
-    width: 400px;
-  }
-  .tasks {
-    display: none;
-  }  
-
-  .main-content {
-    width: 100%;
-  }
 }
 
  /* Media query for medium and large screens */
