@@ -1,13 +1,16 @@
 import React from 'react';
 import Navbar from './components/Navbar';
-import Calendar from './components/calendar';
+import {Calendar, TaskList} from './components/calendar';
+import SideNav from './components/Sidenav';
 
 
 const App = () => {
     return (
         <div>
             <Navbar />
+            <SideNav />
             <Calendar />
+            <TaskList />
             <footer>
                 <p>&copy; Plant Parenthood</p>
             </footer>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../css/main.css'; // Import the CSS file
 import '../css/calendar.css';
 
-export default function Calendar() {
+export function Calendar() {
   const [currentMonth, setCurrentMonth] = useState(new Date().getMonth());
   const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
 
@@ -75,3 +75,47 @@ export default function Calendar() {
   );
 }
 
+///////////////////////////////////////////////////////////////
+
+export const TaskList = () => {
+  return (
+    <div className="main-content">
+    <div className="tasks">
+      <div className="today-date">
+        <div className="event-day">Fri</div>
+        <div className="event-date">10th May 2024</div>
+      </div>
+      <div className="events"></div>
+
+      {/* Add button */}
+      <div className="button">
+        <a href="#modalbox" className="fas fa-plus"></a>
+      </div>
+
+      {/* Add form */}
+      <div id="modalbox" className="modal">
+        <div className="modalcontent">
+          <div className="add-event-header">
+            <div className="title">Add Event</div>
+          </div>
+          <div className="add-event-body">
+            <div className="add-event-input">
+              <input type="text" placeholder="Event Name" className="event-name" />
+            </div>
+            <div className="add-event-input">
+              <input type="text" placeholder="Event Time From" className="event-time-from" />
+            </div>
+            <div className="add-event-input">
+              <input type="text" placeholder="Event Time To" className="event-time-to" />
+            </div>
+          </div>
+          <div className="add-event-footer">
+            <button className="add-event-btn">Add Event</button>
+          </div>
+          <a href="#" className="modalclose">&times;</a>
+        </div>
+      </div>
+    </div>
+    </div>
+  );
+};
