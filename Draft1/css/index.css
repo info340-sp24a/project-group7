@@ -1,3 +1,16 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding-bottom: 60px;
+  height: 100%; /* Add this line */
+
+}
+
 .banner {
   width: 100%;
   max-height: 400px;
@@ -61,4 +74,13 @@ h2 {
 .plant-blurb {
   margin: 5px 0 0;
   font-size: 14px;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  color: #6C584C;
+  padding: 10px 0;
+  text-align: center;
 }

@@ -1,4 +1,7 @@
 import React from 'react';
+import Navbar from './components/Navbar';
+import {Calendar, TaskList} from './components/calendar';
+import SideNav from './components/Sidenav';
 import Navbar from './Navbar';
 import SideBox from './SideBox';
 import './index.css';
@@ -9,6 +12,9 @@ const App = () => {
     return (
         <div className="app-container">
             <Navbar />
+            <SideNav />
+            <Calendar />
+            <TaskList />
             <div className="main-content">
                 <SideBox />
                 <div className="content">
