@@ -85,6 +85,13 @@
     font-family: 'Readex Pro';
 }
 
+footer {
+    width: 100%;
+    color: #6C584C;
+    padding: 10px 0;
+    text-align: center;
+}
+
 /* Media query for small screens (phones) */
 @media (max-width: 576px) {
     .navbar {
