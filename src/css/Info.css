@@ -68,6 +68,7 @@ h3 {
   color: #6C584C;
   position: absolute;
   bottom: 0;
+  text-align: center;
   }
 
   @media screen and (min-width: 320px) and (max-width: 992px) {
