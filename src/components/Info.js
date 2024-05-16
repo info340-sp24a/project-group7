@@ -1,5 +1,6 @@
 import React from 'react';
-import '../index.css';
+import '../css/main.css'; // Import the CSS file
+import '../css/Info.css'; // Import the CSS file
 
 
 
