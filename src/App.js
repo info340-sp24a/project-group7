@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from './components/Navbar';
-import Info from './components/Info'; // Import the Info component
+import {PlantTitle, PlantImage, PlantCare} from './components/Info'; // Import the Info component
 //import { Calendar, TaskList } from './components/calendar';
 //import SideNav from './components/Sidenav';
 //import SideBox from './components/SideBox';

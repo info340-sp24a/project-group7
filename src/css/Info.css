@@ -43,7 +43,7 @@ h3 {
 
 .main-plant {
   height: 100vh;
-  background-image: url(img/monsterabiggo.webp);
+  background-image: url(../img/monsterabiggo.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
