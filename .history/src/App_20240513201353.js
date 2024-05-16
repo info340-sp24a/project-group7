@@ -1,9 +1,7 @@
 import React from 'react';
 import Navbar from './Navbar';
 import SideBox from './SideBox';
-import './index.css';
-
-
+import './App.css'; // Make sure to import the CSS file
 
 const App = () => {
     return (
@@ -12,7 +10,7 @@ const App = () => {
             <div className="main-content">
                 <SideBox />
                 <div className="content">
-                  
+                    {/* Main content goes here */}
                 </div>
             </div>
             <footer>

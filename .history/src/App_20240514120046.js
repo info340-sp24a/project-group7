@@ -12,7 +12,7 @@ const App = () => {
             <div className="main-content">
                 <SideBox />
                 <div className="content">
-                  
+                    <SquaresContainer />
                 </div>
             </div>
             <footer>

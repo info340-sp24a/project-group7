@@ -6,7 +6,7 @@ import './navbar.css'; // Import the CSS file
 const Navbar = () => {
     return (
         <nav className="navbar">
-        
+            
             <div className="hamburger-btn" aria-label="Menu">
                 <i className="fas fa-bars"></i>
             </div>

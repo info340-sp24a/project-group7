@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './Navbar';
 import SideBox from './SideBox';
+
 import './index.css';
 
 
@@ -12,7 +13,7 @@ const App = () => {
             <div className="main-content">
                 <SideBox />
                 <div className="content">
-                  
+                    <SquaresContainer />
                 </div>
             </div>
             <footer>

@@ -1,20 +1,12 @@
 import React from 'react';
 import Navbar from './Navbar';
 import SideBox from './SideBox';
-import './index.css';
-
 
 
 const App = () => {
     return (
-        <div className="app-container">
+        <div>
             <Navbar />
-            <div className="main-content">
-                <SideBox />
-                <div className="content">
-                  
-                </div>
-            </div>
             <footer>
                 <p>&copy; Plant Parenthood</p>
             </footer>
