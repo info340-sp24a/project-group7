@@ -1,0 +1,32 @@
+.note-details {
+  flex-grow: 1;
+  margin-left: 20px;
+}
+
+.selected-note {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid #ddd; /* Adding border */
+}
+
+.selected-note img.note-image {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: block;
+  max-height: 200px; /* Limiting max height for images */
+}
+
+.select-note {
+  color: #999;
+}
+
+
+
+.select-note-box {
+  border: 1px solid #cccccc;
+  padding: 10px;
+  margin-top: 10px;
+}

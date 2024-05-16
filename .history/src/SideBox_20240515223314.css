@@ -1,0 +1,66 @@
+.side-box-container {
+  display: flex;
+}
+
+.side-box {
+  flex: 0 0 30%;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.notes-list {
+  flex: 1;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.note-container {
+  padding: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.note-container:hover {
+  background-color: #f0f0f0;
+}
+
+.delete-button {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.note-details {
+  flex-grow: 1;
+  margin-left: 20px;
+}
+
+.selected-note {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid #dddddd; /* Adding border */
+}
+
+.selected-note img.note-image {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: block;
+  max-height: 200px; /* Limiting max height for images */
+}
+
+.select-note {
+  color: #999;
+}
+
+.select-note-box {
+  border: 1px solid #cccccc;
+  padding: 10px;
+  margin-top: 10px;
+}

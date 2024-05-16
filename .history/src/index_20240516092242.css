@@ -1,0 +1,171 @@
+/* Main content area
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    margin: 200px;
+}
+
+
+
+.side-box {
+    position: absolute;
+    top: 49%; 
+    left: 70%;
+    transform: translate(-50%, -50%);
+    width: 50%; 
+    height: 80%;
+    background-color: #ccd5ae;
+    padding: 20px; 
+    border: 3px solid #f0ead2;
+    border-radius: 20px;
+    margin-top: 50px; 
+}
+
+
+.side-box textarea {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 10px;
+}
+
+.side-box input[type="file"] {
+    margin-bottom: 10px;
+}
+
+.side-box button {
+    background-color:#6C584C;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.side-box button:hover {
+    background-color: #CCD5AE;
+}
+
+.side-box h2 {
+    font-family:cursive;
+    color: #6C584C;
+}
+.side-box form {
+    font-family: 'Readex Pro';
+}
+
+
+.container {
+    background-color: #FEFAF6;
+    padding: 20px; 
+    height: calc(100vh - 100px); 
+    max-width: 1200px; 
+    margin: auto;
+    margin-top: 70px;
+   
+    
+}
+
+
+.column {
+    display: flex; 
+    flex-direction: column; 
+}
+
+.row {
+    display: flex; 
+    justify-content: flex-end; 
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background-color:#ccd5ae; 
+    margin: 10px; 
+    margin-top: 10px;
+    cursor: pointer; 
+
+}
+.recently-added {
+    text-align: right;
+    margin-right: 10px;
+    color:  #5C8444;
+    font-family: 'Readex Pro';
+}
+
+
+@media (max-width: 576px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+
+@media (min-width: 577px) and (max-width: 992px) {
+    .side-box {
+        width: 60%;
+        left: 27%;
+        transform: translate(-50%, -50%);
+    }
+    .column {
+        display: flex; 
+        flex-direction: column; 
+}
+    .row {
+        display: flex; 
+        justify-content: flex-end; 
+}
+
+}
+
+@media (min-width: 992px) {
+    .square {
+    width: 100px;
+    height: 100px;
+    background-color:#ccd5ae; 
+    margin: 10px; 
+    margin-top: 20px;
+}
+} */
+
+
+/* index.css */
+
+.plant-info {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: ;
+  }
+  
+  .plant-info img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .plant-info h1 {
+    color: #006400; /* Dark green */
+    font-size: 28px;
+    margin-top: 0; /* Remove default margin */
+  }
+  
+  .plant-info h3 {
+    color: #4169e1; /* Royal blue */
+    font-size: 20px;
+    margin-top: 5px; /* Adjust top margin */
+  }
+  
+  .plant-info p {
+    color: #333; /* Dark gray */
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  

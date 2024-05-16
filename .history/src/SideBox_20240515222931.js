@@ -76,7 +76,9 @@ const SideBox = () => {
             {selectedNote.image && <img src={URL.createObjectURL(selectedNote.image)} alt="Note" className="note-image" />}
           </div>
         ) : (
-          <p className="select-note">Select a note to view details</p>
+          <div className="select-note-box">
+            <p className="select-note">Select a note to view details</p>
+          </div>
         )}
       </div>
     </div>
