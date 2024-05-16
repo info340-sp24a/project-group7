@@ -1,133 +1,81 @@
-.plant-title {
-    margin: 0;
-    font-size: 20px;
-    color: #538444 
-  }
-  
-.plant-blurb {
-    margin: 5px 0 0;
-    font-size: 14px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Readex Pro';
+}
+
+header {
+  margin-bottom: 20px; /* Add margin to the bottom of the header */
+}
+
+
+h1 {
+  color: #5C8444;
 }
 
 h2 {
     color: #5b8444;
 }
 
-.main-plant {
-    height: 100vh;
-    background-image: url(img/monsterabiggo.webp);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
+h3 {
+  color: #CCD5AE 
 }
 
-/* Reset default margin and padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Readex Pro';
-  }
+.plant-title,
+.main-plant,
+.plant-care {
+  width: calc(33.33% - 20px); /* 33.33% width for each column with 20px gap */
+  margin-right: 20px; /* Gap between columns */
+  float: left; /* Float left to create columns */
+  margin-top: 20px; /* Add margin to the top of the first section */
+}
+.plant-title {
+  padding: 20px;
+  border-radius: 5px;
+  margin-right: 0; /* Reset margin-right for first column */
+}
+
+.plant-blurb {
+    margin: 5px 0 0;
+    font-size: 14px;
+}
+
+.main-plant {
+  height: 100vh;
+  background-image: url(img/monsterabiggo.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   
+}
+
+.plant-image img {
+  max-width: 100%; /* Ensures the image does not exceed its container's width */
+  height: auto; /* Maintains the image's aspect ratio */
+  display: block; /* Ensures the image is displayed as a block element */
+  margin: 0 auto; /* Centers the image horizontally within its container */
+}
+
+
+.plant-care {
+  padding: 20px;
+  border-radius: 5px;
+  margin-right: 0; /* Reset margin-right for last column */
+}
+
   footer {
   color: #6C584C;
   position: absolute;
   bottom: 0;
   }
-  
-  h2 {
-    color: rgb(255, 255, 255) /* Change 'blue' to any color you prefer */
-  }
-  
-  
-  h3 {
-    color: white /* Change 'blue' to any color you prefer */
-  }
-  
-  /* Style for navigation bar */
-  .navbar {
-    background-color: #ffffff; 
-    color: #5C8444;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-  }
-  
-  .navbar .hamburger-btn {
-  color: #6C584C;
-  font-size: 1.5rem;
-  cursor: pointer;
-  display: none;
-  }
-  
-  h1 {
-  position:absolute;
-  left:45%;
-  text-align:center;
-  
-  }
-  
-  .navbar .pages {
-   list-style-type: none;
-   position: relative;
-   left: 1px;
-   font-size: 12px;
-  }
-  
-  .navbar .profile {
-  list-style-type: none;
-  font-size: 12px;
-  }
-  
-  .navbar ul li {
-    display: inline;
-    margin-right: 20px;
-  }
-  
-  .navbar ul li a {
-    text-decoration: none;
-    color: #6C584C;
-    font-size: 17px;
-  }
 
-  .plant-image {
-    float: right;
-    margin-right: 300px; /* Adjust as needed */
-}
 
-.plant-text {
-    float: left;
-    width: calc(100% - 220px); /* Total width minus image width and margin */
-}
+  
+ 
 
-/* mobile screens */
 
-@media (max-width: 598px) {
-  
-    .navbar .pages {
-      display: none;
-    }
-  
-    .navbar .profile {
-      display: none;
-    }
-  
-    .navbar .hamburger-btn {
-      display: block;
-    }
-  
-    .main-content {
-      width: 400px;
-    }
-  
-    .tasks {
-      display: none;
-    }
-    
-  }
+
   
 
   
