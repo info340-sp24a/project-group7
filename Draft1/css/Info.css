@@ -64,12 +64,14 @@ h3 {
   margin-right: 0; /* Reset margin-right for last column */
 }
 
-  footer {
+footer {
   color: #6C584C;
   position: absolute;
   bottom: 0;
-  text-align: center;
-  }
+  width: 100%;
+  text-align: center; /* Center the text */
+}
+
 
   @media screen and (min-width: 320px) and (max-width: 992px) {
     .plant-title,

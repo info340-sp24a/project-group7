@@ -1,9 +1,10 @@
 import React from 'react';
 import '../css/main.css'; // Import the CSS file
-import '../css/Info.css'; // Import the CSS file
+import '../css/plantinfo.css'; // Import the CSS file
 
-export function PlantTitle() {
+export default function Plant() {
   return (
+    <main>
     <section class="plant-title">
         <h2>Monstera</h2>
         <h3>Monstera deliciosa</h3>
@@ -11,22 +12,13 @@ export function PlantTitle() {
             <p class="plant-blurb">They are famous for their natural leaf-holes, which has led to their nickname, Swiss Cheese Plant.</p>
         </div>
     </section>
-  );
-}
 
-export function PlantImage() {
-  return (
     <section class="main-plant">
-    <div class="plant-image">
-        {/*Plant image */}
-        <img src="img/monsterabiggo.webp" alt="Plant" class="center"/>
-    </div>
-</section>
-  );
-}
+        <div class="plant-image">
+            <img src="img/monsterabiggo.webp" alt="Plant" class="center"/>
+        </div>
+    </section>
 
-export function PlantCare() {
-  return (
     <section class="plant-care">
         <div>
             <h2>Monster Care Instructions</h2>
@@ -40,7 +32,10 @@ export function PlantCare() {
             <p class="plant-blurb"> Water every 1-2 weeks, allowing soil to dry out between waterings. Expect to water more often in brighter light and less often in lower light. Pro tip: Monsteras can benefit from filtered water or water left out overnight before using.</p>
         </div>
     </section>
+    </main>
   );
 }
+
+
 
 
