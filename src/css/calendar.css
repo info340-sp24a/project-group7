@@ -1,4 +1,17 @@
 /* Style for calender */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding-bottom: 60px;
+  height: 100%;
+  /* Add this line */
+
+}
 
 footer {
   position: absolute;
@@ -8,6 +21,7 @@ footer {
   padding: 10px 0;
   text-align: center;
 }
+
 .main-content {
   display: flex;
   justify-content: space-between;
@@ -17,24 +31,26 @@ footer {
   position: absolute;
   left: -30px;
   background: rgba(221, 229, 182, 0.27);
-  padding: 50px; /* Increased padding */
+  padding: 50px;
+  /* Increased padding */
   margin-top: 40px;
-  border-radius: 20px; /* Added border radius for rounded corners */
+  border-radius: 20px;
+  /* Added border radius for rounded corners */
 
 }
 
 .calendar {
- position: relative;
- left: -30px;
- display: flex;
- width: 600px;
- height: 500px;
- flex-direction: column;
- flex-wrap: wrap;
- color: #5C8444;
- border-radius: 5px;
- padding: 20px 5px 20px 20px;
- 
+  position: relative;
+  left: -30px;
+  display: flex;
+  width: 600px;
+  height: 500px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: #5C8444;
+  border-radius: 5px;
+  padding: 20px 5px 20px 20px;
+
 }
 
 .calendar .header {
@@ -67,6 +83,7 @@ footer {
   justify-content: center;
   border-radius: 5px;
   color: #5C8444;
+  background-color: #fff;
   font-size: 16px;
   cursor: pointer;
   transition: all 0.3s;
@@ -206,7 +223,7 @@ footer {
   display: block;
   height: 100%;
   background-color: blue;
-  overflow:visible;
+  overflow: visible;
 }
 
 .button {
@@ -227,7 +244,7 @@ footer {
   cursor: pointer;
 }
 
-.button a{
+.button a {
   color: #5C8444;
 }
 
@@ -239,7 +256,7 @@ footer {
   pointer-events: none;
 }
 
-.modal{
+.modal {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -310,6 +327,7 @@ footer {
   justify-content: space-between;
   gap: 10px;
 }
+
 .add-event-body .add-event-input input {
   width: 100%;
   height: 100%;
@@ -324,18 +342,22 @@ footer {
 .add-event-body .add-event-input input::placeholder {
   color: #a5a5a5;
 }
+
 .add-event-body .add-event-input input:focus {
   border-bottom: 1px solid var(--primary-clr);
 }
+
 .add-event-body .add-event-input input:focus::placeholder {
   color: var(--primary-clr);
 }
+
 .add-event-footer {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
 }
+
 .add-event-footer .add-event-btn {
   height: 40px;
   font-size: 1rem;
@@ -349,6 +371,7 @@ footer {
   padding: 5px 10px;
   border: 1px solid var(--primary-clr);
 }
+
 .add-event-footer .add-event-btn:hover {
   background-color: #DDE5B6;
   color: #fff;
@@ -356,75 +379,95 @@ footer {
 
 /* mobile screens */
 
-@media (min-width: 320px) and (max-width: 598px){
- 
+@media (min-width: 320px) and (max-width: 598px) {
+
+
   .main-content {
-    width: 130%;
-    height: 500%;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
   }
 
   .calendar {
     left: 0;
-   }
 
-   .tasks .today-date {
-    bottom: 80%;
-    left: 30px;
-    width: 90%;
-   
-}
-
-.button {
-  bottom: 82%;
-  
-}
-
-.modal {
-  position: absolute;
-    height: 100%;
-    bottom: 0;
-}
-
-.modalcontent {
-  position: absolute;
-  top: 5%;
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-}
-
-
-}
-
-@media (min-width: 598px) and (max-width: 992px){
- 
-  .main-content {
-    width: 101%;
-    height: 500%;
   }
 
-  .calendar {
- 
-   }
+  .tasks {
+    flex-grow: 1;
+    /* Allow tasks section to grow to fill remaining space */
+    margin-top: 20px;
+    /* Add space between calendar and tasks */
+  }
 
-   .tasks .today-date {
-    bottom: 83%;
+  .tasks .today-date {
     left: 30px;
-    width: 90%;
-   
-}
+    position: relative;
+    gap: 320px;
+
+  }
 
   .button {
-    bottom: 85%;
-    
+    position: relative;
   }
 
   .modal {
     position: absolute;
-      height: 100%;
-      bottom: 0;
+    height: 100%;
+    bottom: 0;
+  }
+
+  .modalcontent {
+    position: absolute;
+    top: 5%;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+  }
+
+
+}
+
+@media (min-width: 598px) and (max-width: 992px) {
+
+  .main-content {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .calendar {
+    left: 0;
+  }
+
+  .tasks {
+    flex-grow: 1;
+    /* Allow tasks section to grow to fill remaining space */
+    margin-top: 20px;
+    /* Add space between calendar and tasks */
+  }
+
+  .tasks .today-date {
+    left: 30px;
+    position: relative;
+    gap: 320px;
+
+  }
+
+  .button {
+    position: relative;
+  }
+
+  .modal {
+    position: absolute;
+    height: 100%;
+    bottom: 0;
   }
 
   .modalcontent {
@@ -438,5 +481,4 @@ footer {
   }
 
 }
-
 

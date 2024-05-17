@@ -86,7 +86,9 @@ display: none;
 }
 
 .navbar h1 {
-  left: 30%;
+  text-align: center; /* Center the text */
+  margin: 0 auto; /* Center the element */
+  width: 100%; /* Ensure the h1 takes full width */
 }
 
 .mobile-nav {
@@ -188,5 +190,7 @@ display: none;
   display: none;
 }
 }
+
+
 
 
