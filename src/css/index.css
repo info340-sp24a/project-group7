@@ -23,6 +23,40 @@ h2 {
     color: #5b8444;
 }
 
+.title-section h2 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.search-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px; /* Adjust as needed */
+}
+
+.search-section input[type="text"],
+.search-section button {
+  margin: 0 10px; /* Add spacing between input and button */
+  height: 40px;
+}
+
+.search-section input {
+  border-radius: 15px;
+  background-color: #EFEFEF;
+  border: none;
+  width: 15%;
+  
+}
+
+.search-section button {
+  border-radius: 15px;
+  border: none;
+  width: 6%;
+  background-color: #CCD5AE;
+}
+
 .navigation-section {
   text-align: center;
 }
