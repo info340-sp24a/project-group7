@@ -1,0 +1,94 @@
+.side-box-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.side-box {
+  flex: 0 0 30%;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.side-box h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.side-box form {
+  display: flex;
+  flex-direction: column;
+}
+
+.side-box input[type="text"],
+.side-box textarea,
+.side-box input[type="file"],
+.side-box input[type="color"] {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.side-box textarea {
+  resize: none;
+}
+
+.side-box button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.notes-list {
+  flex: 0 0 30%;
+  padding: 20px;
+}
+
+.note-container {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.note-container:hover {
+  background-color: #f0f0f0;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.note-details {
+  flex: 0 0 40%;
+  padding: 20px;
+}
+
+.selected-note {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.select-note-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.select-note {
+  font-size: 1rem;
+}

@@ -1,0 +1,36 @@
+.note-details {
+  flex-grow: 1;
+  margin-left: 20px;
+} 
+
+
+.selected-note {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid #dddddd; 
+  
+
+.selected-note img.note-image {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: block;
+  max-height: 200px; 
+}
+
+.select-note {
+  color: #AF8F6F;
+  margin-top: -70px; 
+}
+
+.select-note-box {
+  border: 1px solid #B5C18E;
+  padding: 40px;
+  margin-top: -70px;
+  height: 600px; 
+  border-width:3px;
+  
+
+}

@@ -1,0 +1,81 @@
+.side-box-container {
+  display: flex;
+  padding: 20px;
+  height: 100vh; /* Set container height to viewport height */
+}
+
+.side-box {
+  width: 300px;
+  background-color: #f2f2f2;
+  position: fixed; /* Fix the side box */
+}
+
+.notes-list {
+  width: 300px; /* Width matches the side box */
+  padding-left: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  position: fixed; /* Fix the notes list */
+  margin-left: 320px; /* Adjust margin to create space for the side box */
+}
+
+.note-container {
+  padding: 10px;
+  margin-bottom: 10px; /* Add margin-bottom for spacing between notes */
+  background-color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.note-container:hover {
+  background-color: #f2f2f2;
+}
+
+.delete-button {
+  background-color: #ff0000;
+  color: #ffffff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-left: 10px; /* Adjust margin to separate from note container */
+}
+
+.note-details {
+  margin-left: 340px; /* Adjust margin to accommodate the side box */
+  flex-grow: 1;
+  padding: 20px;
+  position: fixed; /* Fix the note details */
+}
+
+.selected-note {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #dddddd;
+  width: 300px;
+}
+
+.selected-note img.note-image {
+  max-width: 100%;
+  border-radius: 3px;
+  margin-top: 10px;
+  display: block;
+  max-height: 150px;
+}
+
+.select-note {
+  color: #AF8F6F;
+  margin-top: -50px;
+}
+
+.select-note-box {
+  border: 1px solid #B5C18E;
+  padding: 10px;
+  margin-top: 50px;
+  height: 300px;
+  width: 150px;
+  border-width: 2px;
+}
