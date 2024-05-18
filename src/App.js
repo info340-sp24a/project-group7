@@ -6,7 +6,7 @@ import PlantGallery from './components/index';
 //import Calendar from './components/calendar';
 //import SideBox from './components/SideBox';
 
-const App = () => {
+function App (props){
     return (
         <div className="app-container">
             {/* Main Navigation Bar */}
