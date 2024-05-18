@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import '../SideBox.css';
-import '../index.css';
+import '../css/SideBox.css';
 
 const SideBox = () => {
   const [title, setTitle] = useState('');
