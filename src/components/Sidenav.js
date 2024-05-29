@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../css/main.css'; // Import the CSS file
 
 
@@ -24,12 +25,12 @@ function openNav() {
              <div id="side-nav" className="mobile-nav">
                  {CloseBtn}
                  <ul>
-                     <li><a href="./index.html">Home</a></li>
-                     <li><a href="./calendar.html">Calendar</a></li>
-                     <li><a href="./diaries.html">Diary</a></li>
-                     <li><a href="./Info.html">Plant Info</a></li>
-                     <li><a href="./login.html">Profile</a></li>
-                     <li><a href="./login.html">Sign Up</a></li>
+                     <li><Link to="/">Home</Link></li>
+                     <li><Link to="/calendar">Calendar</Link></li>
+                     <li><Link to="/diary">Diary</Link></li>
+                     <li><Link to="/plantbio">Plant Bio</Link></li>
+                   { /* <li><Link to="./login.html">Profile</Link></li>
+                     <li><Link to="./login.html">Sign Up</Link></li> */}
                  </ul>
              </div>
          </>

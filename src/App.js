@@ -1,12 +1,13 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import SideNav from './components/Sidenav';
 import PlantGallery from './components/index';
-//import Plant from './components/plantinfo'; 
-//import Calendar from './components/calendar';
-//import SideBox from './components/SideBox';
+import Plant from './components/plantinfo'; 
+import Calendar from './components/calendar';
+import SideBox from './components/SideBox';
 
-function App (props){
+function App(props) {
     return (
         <div className="app-container">
             {/* Main Navigation Bar */}
@@ -15,8 +16,15 @@ function App (props){
             {/* Media Query Navigation Bar */}
             <SideNav />
 
+            <Routes>
+                <Route path="/" element={<PlantGallery />} />
+                <Route path="/plantbio" element={<Plant />} />
+                <Route path="/calendar" element={<Calendar />} />
+                <Route path="/diary" element={<SideBox />} />
+            </Routes>
+
             {/* Index Page */}
-            <PlantGallery />
+            {/*</div> </PlantGallery />*/}
 
             {/* Plant Biography Page */}
             {/*<Plant/>*/}
@@ -27,13 +35,7 @@ function App (props){
             {/*Diary Page*/}
             {/*<SideBox />*/}
 
-            <div className="main-content">
-                {/* <Info /> Include the Info component here */}
 
-                <div className="content">
-                    {/* Content Goes Here */}
-                </div>
-            </div>
             <footer>
                 <p>&copy; Plant Parenthood</p>
             </footer>
