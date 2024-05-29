@@ -21,7 +21,7 @@ const Navbar = () => {
             {/*Profile */}
             <div class="profile">
                 <ul>
-                    <li><Link to="/signin">Sign-In</Link></li>
+                    <li><Link to="/signin">Login</Link></li>
                     {/*<li><Link to="./login.html">Sign Up</Link></li>*/}
                 </ul>
             </div>

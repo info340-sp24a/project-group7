@@ -29,7 +29,7 @@ function openNav() {
                      <li><Link to="/calendar">Calendar</Link></li>
                      <li><Link to="/diary">Diary</Link></li>
                      <li><Link to="/plantbio">Plant Bio</Link></li>
-                     <li><Link to="/signin">Sign-In</Link></li>
+                     <li><Link to="/signin">Login</Link></li>
                  </ul>
              </div>
          </>
