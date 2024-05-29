@@ -19,12 +19,12 @@ const Navbar = () => {
             {/*Title */}
             <h1>Plant Parenthood</h1>
             {/*Profile */}
-           {/* <div class="profile">
+            <div class="profile">
                 <ul>
-                    <li><Link to="./login.html">Profile</Link></li>
-                    <li><Link to="./login.html">Sign Up</Link></li>
+                    <li><Link to="/signin">Sign-In</Link></li>
+                    {/*<li><Link to="./login.html">Sign Up</Link></li>*/}
                 </ul>
-    </div> */}
+            </div>
         </nav>
     );
 };

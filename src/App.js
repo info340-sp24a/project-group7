@@ -5,7 +5,8 @@ import SideNav from './components/Sidenav';
 import PlantGallery from './components/index';
 import Plant from './components/plantinfo'; 
 import Calendar from './components/calendar';
-import SideBox from './components/SideBox';
+import Diary from './components/diary';
+import Signin from './components/signin';
 
 function App(props) {
     return (
@@ -20,21 +21,9 @@ function App(props) {
                 <Route path="/" element={<PlantGallery />} />
                 <Route path="/plantbio" element={<Plant />} />
                 <Route path="/calendar" element={<Calendar />} />
-                <Route path="/diary" element={<SideBox />} />
+                <Route path="/diary" element={<Diary />} />
+                <Route path="/signin" element={<Signin />} />
             </Routes>
-
-            {/* Index Page */}
-            {/*</div> </PlantGallery />*/}
-
-            {/* Plant Biography Page */}
-            {/*<Plant/>*/}
-
-            {/* Calender Page */}
-            {/*<Calendar />*/}
-
-            {/*Diary Page*/}
-            {/*<SideBox />*/}
-
 
             <footer>
                 <p>&copy; Plant Parenthood</p>

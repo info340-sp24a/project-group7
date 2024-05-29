@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import '../css/SideBox.css';
+import '../css/diary.css';
 
-const SideBox = () => {
+const Diary = () => {
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
   const [image, setImage] = useState(null);
@@ -135,4 +135,4 @@ const SideBox = () => {
   );
 };
 
-export default SideBox;
+export default Diary;
