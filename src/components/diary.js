@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import '../css/diary.css';
+import '../css/main.css';
 
 const Diary = () => {
   const [title, setTitle] = useState('');

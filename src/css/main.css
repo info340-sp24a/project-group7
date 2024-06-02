@@ -6,15 +6,102 @@
   font-family: 'Readex Pro';
 }
 
-
-h2 {
-  color: white /* Change 'blue' to any color you prefer */
+.navbar .pages {
+  display: none;
 }
 
-
-h3 {
-  color: white /* Change 'blue' to any color you prefer */
+.navbar .profile {
+  display: none;
 }
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.navbar h1 {
+  order: 2;
+  /* Position the h1 element on the right */
+  flex-grow: 1;
+  /* Allow h1 to take up available space */
+  text-align: center;
+  /* Center the text within the h1 */
+  margin: 0 auto;
+  /* Center the element */
+  width: 100%;
+  /* Ensure the h1 takes full width */
+  color: #5C8444;
+  font-size: 2rem; /* Increase font size for a larger button */
+}
+
+.navbar .hamburger-btn {
+  display: inline-block;
+  /* Display as inline-block */
+  vertical-align: middle;
+  /* Align vertically */
+  cursor: pointer;
+  /* Add cursor pointer */
+  order: 1;
+  font-size: 2rem; /* Increase font size for a larger button */
+  padding: 10px; /* Add padding for better clickability */
+  color: #6C584C;
+}
+
+.mobile-nav {
+  display: block;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #CCD5AE;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 15px;
+  text-align: center;
+}
+
+.mobile-nav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #6C584C;
+  display: block;
+  transition: 0.3s;
+  justify-content: center;
+}
+
+.mobile-nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-nav .close-btn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 18px;
+  margin-left: 50px;
+}
+
+@media (min-width: 598px) {
+  .navbar h1 {
+      position:relative;
+      left:50%;
+      width:50%;
+      justify-content: center;
+      }
+}
+
+@media (min-width: 992px) {
 
 /* Style for navigation bar */
 .navbar {
@@ -34,10 +121,11 @@ cursor: pointer;
 display: none;
 }
 
-h1 {
-position:absolute;
-left:45%;
-text-align:center;
+.navbar h1 {
+position:relative;
+left:0;
+width:30%;
+justify-content: center;
 }
 
 .navbar .pages {
@@ -45,11 +133,15 @@ text-align:center;
  position: relative;
  left: 1px;
  font-size: 12px;
+ display: block;
 }
 
 .navbar .profile {
 list-style-type: none;
 font-size: 12px;
+display: block;
+position: relative;
+left: 87%;
 }
 
 .navbar ul li {
@@ -73,124 +165,8 @@ font-size: 12px;
 display: none;
 }
 
-/* mobile screens */
-
-@media (min-width: 320px) and (max-width: 598px){
-
-.navbar .pages {
-  display: none;
-}
-
-.navbar .profile {
-  display: none;
-}
-
-.navbar h1 {
-  text-align: center; /* Center the text */
-  margin: 0 auto; /* Center the element */
-  width: 100%; /* Ensure the h1 takes full width */
-}
-
-.mobile-nav {
-  display: block;
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #CCD5AE;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 15px;
-  text-align:center;
-}
-
-.mobile-nav a{
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #6C584C;
-  display: block;
-  transition: 0.3s;
-  justify-content: center;
-}
-
-.mobile-nav .close-btn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 18px;
-  margin-left: 50px;
-}
-
-
-.navbar .hamburger-btn {
-  display: block;
-}
-
-}
-
-/* Media query for medium screens (tablets) */
-@media (min-width: 598px) and (max-width: 992px) {
-.navbar .pages {
-  display: none;
-}
-
-.navbar .profile {
-  display: none;
-}
-
-.navbar h1 {
-  text-align: center;
-}
-
-.mobile-nav {
-  display: block;
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #CCD5AE;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 15px;
-  text-align:center;
-}
-
-.mobile-nav a{
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #6C584C;
-  display: block;
-  transition: 0.3s;
-  justify-content: center;
-}
-
-.mobile-nav .close-btn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 18px;
-  margin-left: 50px;
-}
-
-.navbar .hamburger-btn {
-  display: block;
-}
-
-}
-
-/* Media query for medium and large screens */
-@media (min-width: 992px) {
 .hamburger-btn {
   display: none;
 }
+
 }
-
-
-
-
