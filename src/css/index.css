@@ -2,25 +2,25 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  font-family: 'Readex Pro', sans-serif;
 }
 
 main {
   flex: 1;
   padding-bottom: 60px;
-  height: 100%; /* Add this line */
-
+  height: 100%;
 }
 
 .banner {
   width: 100%;
-  max-height: 400px;
+  max-height: 200px; /* Reduce max height for mobile */
   object-fit: cover;
   display: block;
   margin: 0 auto;
 }
 
 h2 {
-    color: #5b8444;
+  color: #5b8444;
 }
 
 .title-section h2 {
@@ -33,12 +33,12 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px; /* Adjust as needed */
+  margin-bottom: 20px;
 }
 
 .search-section input[type="text"],
 .search-section button {
-  margin: 0 10px; /* Add spacing between input and button */
+  margin: 0 10px;
   height: 40px;
 }
 
@@ -46,19 +46,14 @@ h2 {
   border-radius: 15px;
   background-color: #EFEFEF;
   border: none;
-  width: 15%;
-  
+  width: 60%; /* Increase width of input field */
 }
 
 .search-section button {
   border-radius: 15px;
   border: none;
-  width: 6%;
+  width: 20%; /* Increase width of button */
   background-color: #CCD5AE;
-}
-
-.navigation-section {
-  text-align: center;
 }
 
 .plant-gallery {
@@ -69,8 +64,7 @@ h2 {
 
 .row {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column; /* Stack cards vertically */
   margin-bottom: 20px;
 }
 
@@ -80,7 +74,8 @@ h2 {
   transition: 0.3s;
   border-radius: 5px;
   overflow: hidden;
-  width: 322px;
+  width: 90%; /* Reduce width of cards */
+  max-width: 322px; /* Set max width for cards */
   height: 322px;
   margin: 10px;
 }
@@ -102,7 +97,7 @@ h2 {
 .plant-name {
   margin: 0;
   font-size: 16px;
-  color: #538444 
+  color: #538444;
 }
 
 .plant-blurb {
@@ -117,4 +112,48 @@ footer {
   color: #6C584C;
   padding: 10px 0;
   text-align: center;
+}
+
+/* Styles for tablets */
+@media (min-width: 768px) {
+  .banner {
+    max-height: 300px; /* Increase max height for tablets */
+  }
+
+  .search-section input {
+    width: 40%; /* Adjust width input field */
+  }
+
+  .search-section button {
+    width: 15%; /* Adjust width button */
+  }
+
+  .row {
+    flex-direction: row; /* Display cards horizontally */
+    flex-wrap: wrap; /* Allow cards to wrap to next line */
+    justify-content: center; /* Center cards horizontally */
+  }
+
+  .card {
+    width: 45%; /* Adjust width of cards */
+  }
+}
+
+/* Styles for desktops */
+@media (min-width: 992px) {
+  .banner {
+    max-height: 400px; /* Increase max height for desktops */
+  }
+
+  .search-section input {
+    width: 30%; /* Adjust width input field */
+  }
+
+  .search-section button {
+    width: 10%; /* Adjust width button */
+  }
+
+  .card {
+    width: 30%; /* Adjust width cards */
+  }
 }
