@@ -1,10 +1,19 @@
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .login-body {
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
   height: 100vh;
-  background-color: #fbfff9; /* Optional: Set a background color if needed */
-  max-width: 100%;
+  width: 100vw;
+}
+footer {
+  color: #6C584C;
+  width: 100%;
+  position: relative;
+  bottom: 0;
 }
 
 .welcome-message {
@@ -21,20 +30,12 @@
   text-align: center;
 }
 
-.email {
-  font-size: 16px;
-  width: 50px;
-  height: 20px;
-  font-weight: 800;
-  color:#538444;
-}
-
-.image-section {
-  display: none;
-}
-
 .login-section {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fbfff9;
 }
 
 .form-container {
@@ -42,91 +43,21 @@
   margin: 0 auto;
 }
 
-.login-input-text-email {
-  width: 100%;
-  border: 0;
-  font-size: 16px;
-  padding: 15px;
-  margin-top: 35px;
-  margin-bottom: 5px;
-  color: #538444;
-  border-bottom: 2px solid #538444;
-  background-color: #fbfff9;
+.image-section {
+  display: none;
 }
 
-.login-input-text-password {
-  width: 100%;
-  border: 0;
-  font-size: 16px;
-  padding: 15px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  color: #538444;
-  border-bottom: 2px solid #538444;
-  background-color: #fbfff9;
-}
-
-::placeholder {
-  color: #538444;
-}
-
-.remember-container {
-  color: #ADC178;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 25px;
-  margin-bottom: 50px;
-}
-
-.remember-checkbox {
-  accent-color: #ADC178;
-}
-
-.remember-container a {
-  color: #ADC178;
-  text-decoration: none;
-}
-
-.login-footer {
-  width: fit-content;
-  text-align: center;
-}
-
-button {
-  background-color: #5C8444;
-  color: #ffffff;
-  padding: 10px;
-  text-align: center;
-  font-size: 15px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border: 0;
-  border-radius: 10px;
-  width: 100%;
-  padding-bottom: 15px;
-}
-
-.signup-message {
-  color: #ADC178;
-  text-align: center;
-  margin-top: 15px;
-}
-
-.signup-message a {
-  color: #ADC178;
-}
-
-@media (min-width: 598px) {
-  .login-body {
-    flex-direction: row; /* Ensures the sections are side-by-side on larger screens */
-    width: 100%;
-  }
+@media (min-width: 577px) {
+ 
 
   .login-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fbfff9;
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .login-section {
+    width: 65%;
   }
 
   .image-section {
@@ -149,6 +80,3 @@ button {
   
 }
 
-@media (min-width: 992px) {
-  /* Additional styles for larger screens if needed */
-}

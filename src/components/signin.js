@@ -45,9 +45,9 @@ export default function Signin() {
                     <p class="signup-message">Don't have an account? <a href="#">Sign up here</a></p> */}
                 </div>
             </div>
-            {/* <div class="image-section">
+            <div class="image-section">
                 <img src="../img/monstera.jpg" alt="Monstera Plant" />
-            </div> */}
+            </div>
         </div>
 
     );
