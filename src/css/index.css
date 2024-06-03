@@ -13,7 +13,7 @@ main {
 
 .banner {
   width: 100%;
-  max-height: 200px; /* Reduce max height for mobile */
+  max-height: 200px; 
   object-fit: cover;
   display: block;
   margin: 0 auto;
@@ -46,13 +46,14 @@ h2 {
   border-radius: 15px;
   background-color: #EFEFEF;
   border: none;
-  width: 60%; /* Increase width of input field */
+  width: 60%; 
+  padding-left: 20px; 
 }
 
 .search-section button {
   border-radius: 15px;
   border: none;
-  width: 20%; /* Increase width of button */
+  width: 20%; 
   background-color: #CCD5AE;
 }
 
@@ -64,7 +65,7 @@ h2 {
 
 .row {
   display: flex;
-  flex-direction: column; /* Stack cards vertically */
+  flex-direction: column; 
   margin-bottom: 20px;
 }
 
@@ -74,8 +75,8 @@ h2 {
   transition: 0.3s;
   border-radius: 5px;
   overflow: hidden;
-  width: 90%; /* Reduce width of cards */
-  max-width: 322px; /* Set max width for cards */
+  width: 90%; 
+  max-width: 322px; 
   height: 322px;
   margin: 10px;
 }
@@ -114,46 +115,46 @@ footer {
   text-align: center;
 }
 
-/* Styles for tablets */
+
 @media (min-width: 768px) {
   .banner {
-    max-height: 300px; /* Increase max height for tablets */
+    max-height: 300px; 
   }
 
   .search-section input {
-    width: 40%; /* Adjust width input field */
+    width: 40%; 
   }
 
   .search-section button {
-    width: 15%; /* Adjust width button */
+    width: 15%; 
   }
 
   .row {
-    flex-direction: row; /* Display cards horizontally */
-    flex-wrap: wrap; /* Allow cards to wrap to next line */
-    justify-content: center; /* Center cards horizontally */
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    justify-content: center; 
   }
 
   .card {
-    width: 45%; /* Adjust width of cards */
+    width: 45%; 
   }
 }
 
-/* Styles for desktops */
+
 @media (min-width: 992px) {
   .banner {
-    max-height: 400px; /* Increase max height for desktops */
+    max-height: 400px; 
   }
 
   .search-section input {
-    width: 30%; /* Adjust width input field */
+    width: 30%; 
   }
 
   .search-section button {
-    width: 10%; /* Adjust width button */
+    width: 10%; 
   }
 
   .card {
-    width: 30%; /* Adjust width cards */
+    width: 30%; 
   }
 }
