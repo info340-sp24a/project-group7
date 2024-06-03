@@ -1,21 +1,17 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import SideNav from './components/Sidenav';
+import Navbar from './components/Navbar'; // Ensure correct import path
 import PlantGallery from './components/index';
-import Plant from './components/plantinfo'; 
+import Plant from './components/plantinfo';
 import Calendar from './components/calendar';
 import Diary from './components/diary';
 import Signin from './components/signin';
 
 function App(props) {
     return (
-        <div className="app-container">
+        <>
             {/* Main Navigation Bar */}
             <Navbar />
-
-            {/* Media Query Navigation Bar */}
-            <SideNav />
 
             <Routes>
                 <Route path="/" element={<PlantGallery />} />
@@ -28,8 +24,8 @@ function App(props) {
             <footer>
                 <p>&copy; Plant Parenthood</p>
             </footer>
-        </div>
+        </>
     );
-};
+}
 
 export default App;

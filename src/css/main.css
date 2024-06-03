@@ -6,89 +6,41 @@
   font-family: 'Readex Pro';
 }
 
-
-h2 {
-  color: white /* Change 'blue' to any color you prefer */
-}
-
-
-h3 {
-  color: white /* Change 'blue' to any color you prefer */
-}
-
-/* Style for navigation bar */
 .navbar {
-  background-color: #ffffff; 
-  color: #5C8444;
-  padding: 10px 20px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  justify-content: space-between;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 
 .navbar .hamburger-btn {
-color: #6C584C;
-font-size: 1.5rem;
-cursor: pointer;
-display: none;
-}
-
-h1 {
-position:absolute;
-left:45%;
-text-align:center;
-}
-
-.navbar .pages {
- list-style-type: none;
- position: relative;
- left: 1px;
- font-size: 12px;
-}
-
-.navbar .profile {
-list-style-type: none;
-font-size: 12px;
-}
-
-.navbar ul li {
-  display: inline;
-  margin-right: 20px;
-}
-
-.navbar ul li a {
-  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  font-size: 2rem;
+  padding: 10px;
   color: #6C584C;
-  font-size: 17px;
-}
-
-.navbar ul li a:hover {
-  color:#CCD5AE; /* Change color on hover */
-}
-
-/* Dropdown menu*/
-
-.mobile-nav {
-display: none;
-}
-
-/* mobile screens */
-
-@media (min-width: 320px) and (max-width: 598px){
-
-.navbar .pages {
-  display: none;
-}
-
-.navbar .profile {
-  display: none;
+  order: 1;
 }
 
 .navbar h1 {
-  text-align: center; /* Center the text */
-  margin: 0 auto; /* Center the element */
-  width: 100%; /* Ensure the h1 takes full width */
+  flex-grow: 1;
+  text-align: center;
+  margin: 0 auto;
+  color: #5C8444;
+  font-size: 2rem;
+  order: 2;
+}
+
+.navbar .pages{
+  display: none;
 }
 
 .mobile-nav {
@@ -103,64 +55,14 @@ display: none;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 15px;
-  text-align:center;
-}
-
-.mobile-nav a{
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #6C584C;
-  display: block;
-  transition: 0.3s;
-  justify-content: center;
-}
-
-.mobile-nav .close-btn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 18px;
-  margin-left: 50px;
-}
-
-
-.navbar .hamburger-btn {
-  display: block;
-}
-
-}
-
-/* Media query for medium screens (tablets) */
-@media (min-width: 598px) and (max-width: 992px) {
-.navbar .pages {
-  display: none;
-}
-
-.navbar .profile {
-  display: none;
-}
-
-.navbar h1 {
   text-align: center;
 }
 
-.mobile-nav {
-  display: block;
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #CCD5AE;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 15px;
-  text-align:center;
+.mobile-nav.open {
+  width: 100%; /* Adjust width as needed */
 }
 
-.mobile-nav a{
+.mobile-nav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
@@ -170,27 +72,79 @@ display: none;
   justify-content: center;
 }
 
-.mobile-nav .close-btn {
+.mobile-nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-nav .closebtn {
   position: absolute;
   top: 0;
   right: 25px;
   font-size: 18px;
   margin-left: 50px;
+  cursor: pointer;
 }
 
-.navbar .hamburger-btn {
-  display: block;
+@media (min-width: 598px) {
+  .navbar-content {
+      flex-direction: row;
+  }
+
+  .navbar h1 {
+      order: 1;
+      text-align: left;
+      width: auto;
+      flex-grow: 0;
+      margin: 0;
+  }
+
+  .navbar .pages {
+      display: block;
+      order: 2;
+      margin-left: auto;
+  }
 }
 
-}
-
-/* Media query for medium and large screens */
 @media (min-width: 992px) {
-.hamburger-btn {
-  display: none;
+  .navbar {
+      background-color: #ffffff;
+      color: #5C8444;
+      padding: 10px 20px;
+  }
+
+  .navbar .hamburger-btn {
+      display: none;
+  }
+
+  .navbar .pages {
+      list-style-type: none;
+      font-size: 12px;
+      display: flex;
+      justify-content: flex-end;
+  }
+
+  .navbar ul li {
+      display: inline;
+      margin-right: 20px;
+  }
+
+  .navbar ul li a {
+      text-decoration: none;
+      color: #6C584C;
+      font-size: 17px;
+  }
+
+  .navbar ul li a:hover {
+      color: #CCD5AE; /* Change color on hover */
+  }
+
+  .mobile-nav {
+      display: none;
+  }
 }
-}
-
-
-
-
