@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar'; // Ensure correct import path
 import PlantGallery from './components/index';
@@ -6,8 +6,19 @@ import Plant from './components/plantinfo';
 import Calendar from './components/calendar';
 import Diary from './components/diary';
 import Signin from './components/signin';
+import SearchFilter from './components/SearchFilter'; // Import SearchFilter component
+import plantData from './data/plantData';
 
-function App(props) {
+function App() {
+    const [filteredPlants, setFilteredPlants] = useState(plantData);
+
+    const handleSearch = (searchTerm) => {
+        const filtered = plantData.filter((plant) =>
+            plant.plant_name.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+        setFilteredPlants(filtered);
+    };
+
     return (
         <>
             {/* Main Navigation Bar */}
