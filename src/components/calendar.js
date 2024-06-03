@@ -84,10 +84,10 @@ export default function Calendar() {
             <div className="btn today" onClick={() => { setCurrentMonth(new Date().getMonth()); setCurrentYear(new Date().getFullYear()); }}>
               <strong className="today">Today</strong>
             </div>
-            <div className="btn prev" onClick={handlePrev}>
+            <div aria-label='prev-month'  className="btn prev" onClick={handlePrev}>
               <i className="fas fa-chevron-left"></i>
             </div>
-            <div className="btn next" onClick={handleNext}>
+            <div aria-label='next-month' className="btn next" onClick={handleNext}>
               <i className="fas fa-chevron-right"></i>
             </div>
           </div>
@@ -135,7 +135,9 @@ export default function Calendar() {
         <div className={`add-event-wrapper ${showAddEventForm ? 'active' : ''}`}>
           <div className="add-event-header">
             <div className="title">Add Event</div>
-            <i className="fas fa-times close" onClick={() => setShowAddEventForm(false)} />
+            <button aria-label='close-form'  className="fas fa-times close" onClick={() => setShowAddEventForm(false)} >
+            </button>
+
           </div>
           <div className="add-event-body">
             <div className="add-event-input">
@@ -171,7 +173,7 @@ export default function Calendar() {
           </div>
         </div>
       </div>
-      <button className="add-event" onClick={() => setShowAddEventForm(true)}>
+      <button aria-label='add-new-event' className="add-event" onClick={() => setShowAddEventForm(true)}>
         <i className="fas fa-plus" />
       </button>
     </div>

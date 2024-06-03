@@ -337,7 +337,11 @@ body {
   .add-event-header .close {
     font-size: 1.5rem;
     cursor: pointer;
+    width: 5px;
+    color: #5C8444;
+    background-color: #fff;
   }
+
   .add-event-header .close:hover {
     color: var(--primary-clr);
   }
