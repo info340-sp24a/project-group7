@@ -22,7 +22,7 @@ export default function Plant() {
 
     <section className="plant-care">
         <div>
-            <h2>Monster Care Instructions</h2>
+            <h2>Monstera Care Instructions</h2>
             <p class="plant-blurb">Two different species of Monstera are cultivated as houseplants - Monstera deliciosa and Monstera adansonii. Monstera adansonii is distinguished from M. deliciosa by having longer, tapering leaves, as well as having completely enclosed leaf holes. Monstera deliciosa leaf holes eventually grow towards the edge and open up as they mature. Part of Araceae, the Aroid Family, they are one of the few aroids that produces edible fruit, particularly, Monstera deliciosa, though they rarely flower or produce edible fruit indoors. Monsteras, like many aroids, were made known formally to the botanical world during the early 20th century, although they had been known for much longer by the indigenous peoples of Central America.
             </p>
 
