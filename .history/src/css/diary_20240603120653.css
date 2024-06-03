@@ -1,11 +1,12 @@
 /* Main content area */
 .main-content {
   display: flex;
-  padding: 100px;
+  padding: 80px;
   margin: 0 auto;
   max-width: 100%;
   justify-content: space-between; 
-  background: rgba(221, 229, 182, 0.27);
+  background-color:white;
+
 
 }
 
@@ -149,8 +150,10 @@ footer {
   bottom: 0;
 }
 
+/* 
 
-@media (min-width: 598px) {
+
+@media (min-width: 300px) {
   .side-box,
   .note-details-container {
     width: 100%;
@@ -199,4 +202,4 @@ footer {
     margin-bottom: 20px;
   }
 }
-
+ */

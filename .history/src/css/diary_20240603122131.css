@@ -1,7 +1,7 @@
 /* Main content area */
 .main-content {
   display: flex;
-  padding: 100px;
+  padding: 80px;
   margin: 0 auto;
   max-width: 100%;
   justify-content: space-between; 
@@ -150,7 +150,7 @@ footer {
 }
 
 
-@media (min-width: 598px) {
+@media (min-width: 90px) {
   .side-box,
   .note-details-container {
     width: 100%;

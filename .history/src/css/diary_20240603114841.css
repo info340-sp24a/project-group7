@@ -1,17 +1,18 @@
 /* Main content area */
 .main-content {
   display: flex;
-  padding: 100px;
+  padding: 80px;
   margin: 0 auto;
   max-width: 100%;
   justify-content: space-between; 
-  background: rgba(221, 229, 182, 0.27);
+  background-color:white;
+
 
 }
 
 /* Side box */
 .side-box {
-  width: 250%;
+  width: 450%;
   background-color: #ccd5ae;
   padding: 20px;
   border: 3px solid #6C584C;
@@ -150,7 +151,9 @@ footer {
 }
 
 
-@media (min-width: 598px) {
+
+
+@media (min-width: 300px) {
   .side-box,
   .note-details-container {
     width: 100%;

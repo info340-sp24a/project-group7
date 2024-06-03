@@ -1,7 +1,7 @@
 /* Main content area */
 .main-content {
   display: flex;
-  padding: 100px;
+  padding: 90px;
   margin: 0 auto;
   max-width: 100%;
   justify-content: space-between; 
