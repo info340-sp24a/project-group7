@@ -18,7 +18,7 @@ body {
     text-align: center;
   }
   
-  .main-content {
+  .container {
     display: flex;
     justify-content: space-between;
     margin: 20px;
@@ -408,17 +408,19 @@ body {
   /* media queries */
 
   @media (min-width: 598px) {
-
+    .container {
+      width: 100%;
+    }
     
     
   }
   @media (min-width: 992px) {
     
-    .main-content {
+    .container {
         min-height: initial; 
         flex-direction: initial; 
         border-radius: 20px; 
-        width: 1200px; 
+        width: 100%; 
       }
 
       .left {

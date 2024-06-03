@@ -119,7 +119,7 @@ export default function Calendar() {
   };
 
   return (
-    <div className="main-content">
+    <div className="container">
       <div className="left">
         {renderCalendar()}
       </div>

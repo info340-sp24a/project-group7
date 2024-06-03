@@ -142,9 +142,6 @@ button {
     display: block;
   }
 
-  .main-content {
-    width: 400px;
-  }
 
   .tasks {
     display: none;
@@ -174,9 +171,6 @@ button {
     display: block;
   }
 
-  .main-content {
-    width: 400px;
-  }
   .tasks {
     display: none;
   }  

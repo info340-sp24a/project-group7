@@ -38,8 +38,7 @@
   order: 2;
 }
 
-.navbar .pages,
-.navbar .profile {
+.navbar .pages{
   display: none;
 }
 
@@ -92,10 +91,22 @@
 }
 
 @media (min-width: 598px) {
+  .navbar-content {
+      flex-direction: row;
+  }
+
   .navbar h1 {
-      position: relative;
-      width: 50%;
-      justify-content: center;
+      order: 1;
+      text-align: left;
+      width: auto;
+      flex-grow: 0;
+      margin: 0;
+  }
+
+  .navbar .pages {
+      display: block;
+      order: 2;
+      margin-left: auto;
   }
 }
 
@@ -104,31 +115,17 @@
       background-color: #ffffff;
       color: #5C8444;
       padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px;
   }
 
   .navbar .hamburger-btn {
-      color: #6C584C;
-      font-size: 1.5rem;
-      cursor: pointer;
       display: none;
-  }
-
-  .navbar h1 {
-      position: relative;
-      justify-content: center;
   }
 
   .navbar .pages {
       list-style-type: none;
-      position: relative;
-      left: 1px;
       font-size: 12px;
-      display: block;
-      justify-content: center;
+      display: flex;
+      justify-content: flex-end;
   }
 
   .navbar ul li {
@@ -147,10 +144,6 @@
   }
 
   .mobile-nav {
-      display: none;
-  }
-
-  .hamburger-btn {
       display: none;
   }
 }
