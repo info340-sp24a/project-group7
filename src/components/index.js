@@ -7,42 +7,58 @@ const plantData = [
   {
     name: 'Monstera',
     img: '../img/Rectangle 68.png',
-    description: 'They are famous for their natural leaf-holes, which has led to their nickname, Swiss Cheese Plant.'
+    description: 'They are famous for their natural leaf-holes, which has led to their nickname, Swiss Cheese Plant.',
+    lightRequirement: 'Medium Light',
+    wateringFrequency: 'Medium'
   },
   {
     name: 'Pothos',
     img: '../img/pothos.jpg',
-    description: 'Pothos are beloved for their trailing vines of glossy, heart-shaped leaves and easy care requirements.'
+    description: 'Pothos are beloved for their trailing vines of glossy, heart-shaped leaves and easy care requirements.',
+    lightRequirement: 'Low Light',
+    wateringFrequency: 'Low'
   },
   {
     name: 'Spider Plant',
     img: '../img/spiderplant.jpg',
-    description: 'Spider plants are unmistakable with their arching, grassy leaves striped in green and white.'
+    description: 'Spider plants are unmistakable with their arching, grassy leaves striped in green and white.',
+    lightRequirement: 'Bright Light',
+    wateringFrequency: 'Medium'
   },
   {
     name: 'Snake Plant',
     img: '../img/Rectangle 14.png',
-    description: 'The upright, sword-like leaves of the snake plant make it an architectural and low-maintenance choice.'
+    description: 'The upright, sword-like leaves of the snake plant make it an architectural and low-maintenance choice.',
+    lightRequirement: 'Low Light',
+    wateringFrequency: 'Low'
   },
   {
     name: 'Cat Palm',
     img: '../img/Rectangle 69.png',
-    description: 'The cat palm is prized for its fluffy, arching fronds of slender green leaves that give it a lush, tropical appearance.'
+    description: 'The cat palm is prized for its fluffy, arching fronds of slender green leaves that give it a lush, tropical appearance.',
+    lightRequirement: 'Medium Light',
+    wateringFrequency: 'High'
   },
   {
     name: 'Chinese Evergreen',
     img: '../img/chineseevergreen.jpg',
-    description: 'Chinese evergreens have beautiful, oval leaves patterned in shades of green, pink, red, and white depending on the variety.'
+    description: 'Chinese evergreens have beautiful, oval leaves patterned in shades of green, pink, red, and white depending on the variety.',
+    lightRequirement: 'Low Light',
+    wateringFrequency: 'Medium'
   },
   {
     name: 'Dracaena',
     img: '../img/dracaena.jpg',
-    description: 'Dracaenas are a diverse group of plants valued for their upright, cane-like stems and colorful sword-shaped leaves.'
+    description: 'Dracaenas are a diverse group of plants valued for their upright, cane-like stems and colorful sword-shaped leaves.',
+    lightRequirement: 'Medium Light',
+    wateringFrequency: 'Low'
   },
   {
     name: 'ZZ Plant',
     img: '../img/zzplant.jpg',
-    description: 'The ZZ plant is prized for its thick, waxy stems densely covered in glossy green leaves.'
+    description: 'The ZZ plant is prized for its thick, waxy stems densely covered in glossy green leaves.',
+    lightRequirement: 'Low Light',
+    wateringFrequency: 'Low'
   }
 ];
 
@@ -54,10 +70,14 @@ export default function PlantGallery() {
     setSearchTerm(e.target.value);
   };
 
-  const handleSearchClick = () => {
-    const filtered = plantData.filter(plant =>
-      plant.name.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+  const handleSearch = (searchTerm, selectedCategories, selectedLightRequirements, selectedWateringFrequencies) => {
+    const filtered = plantData.filter(plant => {
+      const matchesSearchTerm = plant.name.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesCategory = selectedCategories.length === 0 || selectedCategories.includes(plant.name);
+      const matchesLight = selectedLightRequirements.length === 0 || selectedLightRequirements.includes(plant.lightRequirement);
+      const matchesWatering = selectedWateringFrequencies.length === 0 || selectedWateringFrequencies.includes(plant.wateringFrequency);
+      return matchesSearchTerm && matchesCategory && matchesLight && matchesWatering;
+    });
     setFilteredPlants(filtered);
   };
 
@@ -76,7 +96,7 @@ export default function PlantGallery() {
         <h2>Houseplants</h2>
       </section>
 
-      <SearchFilter />
+      <SearchFilter onSearch={handleSearch} />
 
       <section className="search-section">
         <input
@@ -86,7 +106,7 @@ export default function PlantGallery() {
           value={searchTerm}
           onChange={handleSearchInput}
         />
-        <button id="searchBtn" onClick={handleSearchClick}>Search</button>
+        <button id="searchBtn" onClick={() => handleSearch(searchTerm, [], [], [])}>Search</button>
         <button id="resetBtn" onClick={handleResetClick}>All</button>
       </section>
 

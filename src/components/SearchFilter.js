@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Row, Col, Button, Spinner } from 'react-bootstrap';
-import plantData from '../data/plantData';
 import '../css/searchfilter.css';
 
 const SearchFilter = ({ onSearch }) => {
@@ -8,7 +7,7 @@ const SearchFilter = ({ onSearch }) => {
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [selectedLightRequirements, setSelectedLightRequirements] = useState([]);
   const [selectedWateringFrequencies, setSelectedWateringFrequencies] = useState([]);
-  const [isLoading, setIsLoading] = useState(false); // State for loading spinner
+  const [isLoading, setIsLoading] = useState(false);
   const [showCategoryDropdown, setShowCategoryDropdown] = useState(false);
   const [showLightDropdown, setShowLightDropdown] = useState(false);
   const [showWateringDropdown, setShowWateringDropdown] = useState(false);
@@ -48,7 +47,7 @@ const SearchFilter = ({ onSearch }) => {
   };
 
   const handleApplyFilters = () => {
-    setIsLoading(true); // Set loading state to true when filters applied
+    setIsLoading(true);
     setTimeout(() => {
       onSearch(
         searchTerm,
@@ -56,100 +55,100 @@ const SearchFilter = ({ onSearch }) => {
         selectedLightRequirements,
         selectedWateringFrequencies
       );
-      setIsLoading(false); 
-    }, 1000); // 1 second delay
+      setIsLoading(false);
+    }, 1000);
   };
 
-  const categories = Array.from(new Set(plantData.map((plant) => plant.plant_name)));
-  const lightRequirements = Array.from(new Set(plantData.map((plant) => plant.light_requirement)));
-  const wateringFrequencies = Array.from(new Set(plantData.map((plant) => plant.watering_frequency)));
+  const categories = ['Monstera', 'Pothos', 'Spider Plant', 'Snake Plant', 'Cat Palm', 'Chinese Evergreen', 'Dracaena', 'ZZ Plant'];
+  const lightRequirements = ['Low Light', 'Medium Light', 'Bright Light'];
+  const wateringFrequencies = ['Low', 'Medium', 'High'];
 
   return (
     <Row className="search-filter-container justify-content-center text-center">
       <div className='all-col'>
-      <Col md={3}>
-        <div className="dropdown">
-          <Button className="dropdown-toggle" onClick={() => setShowCategoryDropdown(!showCategoryDropdown)}>
-            Common Plants
-          </Button>
-          {showCategoryDropdown && (
-            <div className="dropdown-menu show">
-              {categories.map((category, index) => (
-                <div key={index} className="dropdown-item">
-                  <label>
-                    <input
-                      type="checkbox"
-                      value={category}
-                      checked={selectedCategories.includes(category)}
-                      onChange={() => handleCategoryToggle(category)}
-                    />{' '}
-                    {category}
-                  </label>
-                </div>
-              ))}
-            </div>
+        <Col md={3}>
+          <div className="dropdown">
+            <Button className="dropdown-toggle" onClick={() => setShowCategoryDropdown(!showCategoryDropdown)}>
+              Common Plants
+            </Button>
+            {showCategoryDropdown && (
+              <div className="dropdown-menu show">
+                {categories.map((category, index) => (
+                  <div key={index} className="dropdown-item">
+                    <label>
+                      <input
+                        type="checkbox"
+                        value={category}
+                        checked={selectedCategories.includes(category)}
+                        onChange={() => handleCategoryToggle(category)}
+                      />{' '}
+                      {category}
+                    </label>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </Col>
+        <Col md={3}>
+          <div className="dropdown">
+            <Button className="dropdown-toggle" onClick={() => setShowLightDropdown(!showLightDropdown)}>
+              Sunlight
+            </Button>
+            {showLightDropdown && (
+              <div className="dropdown-menu show">
+                {lightRequirements.map((requirement, index) => (
+                  <div key={index} className="dropdown-item">
+                    <label>
+                      <input
+                        type="checkbox"
+                        value={requirement}
+                        checked={selectedLightRequirements.includes(requirement)}
+                        onChange={() => handleLightRequirementToggle(requirement)}
+                      />{' '}
+                      {requirement}
+                    </label>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </Col>
+        <Col md={3}>
+          <div className="dropdown">
+            <Button className="dropdown-toggle" onClick={() => setShowWateringDropdown(!showWateringDropdown)}>
+              Watering
+            </Button>
+            {showWateringDropdown && (
+              <div className="dropdown-menu show">
+                {wateringFrequencies.map((frequency, index) => (
+                  <div key={index} className="dropdown-item">
+                    <label>
+                      <input
+                        type="checkbox"
+                        value={frequency}
+                        checked={selectedWateringFrequencies.includes(frequency)}
+                        onChange={() => handleWateringFrequencyToggle(frequency)}
+                      />{' '}
+                      {frequency}
+                    </label>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </Col>
+        <Col md={3}>
+          {isLoading ? (
+            <Spinner animation="border" role="status">
+              <span className="visually-hidden">Loading...</span>
+            </Spinner>
+          ) : (
+            <Button className='filter-btn' variant="primary" onClick={handleApplyFilters}>
+              Apply Filters
+            </Button>
           )}
-        </div>
-      </Col>
-      <Col md={3}>
-        <div className="dropdown">
-          <Button className="dropdown-toggle" onClick={() => setShowLightDropdown(!showLightDropdown)}>
-            Sunlight
-          </Button>
-          {showLightDropdown && (
-            <div className="dropdown-menu show">
-              {lightRequirements.map((requirement, index) => (
-                <div key={index} className="dropdown-item">
-                  <label>
-                    <input
-                      type="checkbox"
-                      value={requirement}
-                      checked={selectedLightRequirements.includes(requirement)}
-                      onChange={() => handleLightRequirementToggle(requirement)}
-                    />{' '}
-                    {requirement}
-                  </label>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
-      </Col>
-      <Col md={3}>
-        <div className="dropdown">
-          <Button className="dropdown-toggle" onClick={() => setShowWateringDropdown(!showWateringDropdown)}>
-            Watering
-          </Button>
-          {showWateringDropdown && (
-            <div className="dropdown-menu show">
-              {wateringFrequencies.map((frequency, index) => (
-                <div key={index} className="dropdown-item">
-                  <label>
-                    <input
-                      type="checkbox"
-                      value={frequency}
-                      checked={selectedWateringFrequencies.includes(frequency)}
-                      onChange={() => handleWateringFrequencyToggle(frequency)}
-                    />{' '}
-                    {frequency}
-                  </label>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
-      </Col>
-      <Col md={3}>
-        {isLoading ? (
-          <Spinner animation="border" role="status">
-            <span className="visually-hidden">Loading...</span>
-          </Spinner>
-        ) : (
-          <Button className='filter-btn' variant="primary" onClick={handleApplyFilters}>
-            Apply Filters
-          </Button>
-        )}
-      </Col>
+        </Col>
       </div>
     </Row>
   );
