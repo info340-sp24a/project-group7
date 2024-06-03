@@ -1,6 +1,8 @@
 import React from 'react';
 import '../css/main.css'; // Import the CSS file
 import '../css/index.css';
+import '../components/SearchFilter.js';
+import SearchFilter from '../components/SearchFilter.js';
 
 export default function PlantGallery() {
   return (
@@ -12,6 +14,8 @@ export default function PlantGallery() {
       <section className="title-section">
         <h2>Houseplants</h2>
       </section>
+
+      <SearchFilter/>
 
       <section className="search-section">
         <input type="text" id="searchInput" placeholder="Search for plants..." />
