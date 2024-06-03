@@ -147,30 +147,7 @@
 }
 
 
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  color: #6C584C;
-  padding: 10px 0;
-  text-align: center;
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-}
-
-
-footer {
-  position: fixed;
-  bottom: 0;
-}
-
-
-
-
-
+footer
 
 @media (max-width: 576px) {
   .side-box,

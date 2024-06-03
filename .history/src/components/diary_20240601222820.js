@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import '../css/diary.css';
 
 const Diary = () => {
@@ -8,6 +8,7 @@ const Diary = () => {
   const [notes, setNotes] = useState([]);
   const [selectedNote, setSelectedNote] = useState(null);
   const [color, setColor] = useState('#ffffff');
+  
 
   useEffect(() => {
     const storedNotes = localStorage.getItem('notes');
@@ -40,9 +41,7 @@ const Diary = () => {
     }
   };
 
-  const handleNoteClick = (note) => {
-    setSelectedNote(prevNote => prevNote === note ? null : note);
-  };
+  const handleNoteClick = (note) => setSelectedNote(note);
 
   const handleDeleteNote = (index) => {
     const updatedNotes = notes.filter((_, i) => i !== index);
@@ -80,7 +79,7 @@ const Diary = () => {
             accept="image/*"
             onChange={handleChange}
           />
-          <label htmlFor="color">Select color:</label>
+          <label htmlFor="color">Select color ;</label>
           <input
             type="color"
             name="color"
@@ -92,7 +91,7 @@ const Diary = () => {
       </aside>
       <div className="note-details-container">
         <div className="note-details">
-          {selectedNote && (
+          {selectedNote ? (
             <div className="selected-note">
               <h3>{selectedNote.title}</h3>
               <p>{selectedNote.body}</p>
@@ -103,6 +102,10 @@ const Diary = () => {
                   className="note-image"
                 />
               )}
+            </div>
+          ) : (
+            <div className="select-note-box">
+              <p className="select-note">Select a note to view details</p>
             </div>
           )}
         </div>

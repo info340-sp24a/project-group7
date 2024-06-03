@@ -147,31 +147,15 @@
 }
 
 
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  color: #6C584C;
-  padding: 10px 0;
-  text-align: center;
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  flex-wrap: wrap;
 }
-
-footer {
-  position: fixed;
-  bottom: 0;
-}
-
-
-footer {
-  position: fixed;
-  bottom: 0;
-}
-
-
-
-
-
-
 @media (max-width: 576px) {
   .side-box,
   .note-details-container {

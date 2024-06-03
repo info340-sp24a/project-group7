@@ -129,7 +129,19 @@
   background-color: #5C8444;
 }
 
+.footer {
+  background-color: #6C584C;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
 
+.footer p {
+  margin: 0;
+  font-family: 'Readex Pro', sans-serif;
+}
 
 /* Media queries */
 @media (max-width: 992px) {
@@ -145,32 +157,6 @@
     margin-bottom: 20px;
   }
 }
-
-
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  color: #6C584C;
-  padding: 10px 0;
-  text-align: center;
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-}
-
-
-footer {
-  position: fixed;
-  bottom: 0;
-}
-
-
-
-
-
 
 @media (max-width: 576px) {
   .side-box,

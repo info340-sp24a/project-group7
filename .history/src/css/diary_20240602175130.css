@@ -1,18 +1,16 @@
 /* Main content area */
 .main-content {
   display: flex;
-  padding: 80px;
+  padding: 20px;
   margin: 0 auto;
   max-width: 1200px;
   justify-content: space-between;
-  background-color: #fff;
-
 
 }
 
 /* Side box */
 .side-box {
-  width: 250%;
+  width: 90%;
   background-color: #ccd5ae;
   padding: 20px;
   border: 3px solid #6C584C;
@@ -67,7 +65,7 @@
 }
 
 .selected-note {
-  background-color: #ccd5ae;
+  background-color: #262f06;
   padding: 20px;
   border-radius: 10px;
   font-family: 'Readex Pro', sans-serif;
@@ -129,8 +127,6 @@
   background-color: #5C8444;
 }
 
-
-
 /* Media queries */
 @media (max-width: 992px) {
   .main-content {
@@ -145,32 +141,6 @@
     margin-bottom: 20px;
   }
 }
-
-
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  color: #6C584C;
-  padding: 10px 0;
-  text-align: center;
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-}
-
-
-footer {
-  position: fixed;
-  bottom: 0;
-}
-
-
-
-
-
 
 @media (max-width: 576px) {
   .side-box,

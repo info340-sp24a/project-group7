@@ -156,22 +156,6 @@ footer {
   text-align: center;
 }
 
-footer {
-  position: fixed;
-  bottom: 0;
-}
-
-
-footer {
-  position: fixed;
-  bottom: 0;
-}
-
-
-
-
-
-
 @media (max-width: 576px) {
   .side-box,
   .note-details-container {

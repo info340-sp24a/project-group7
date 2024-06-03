@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import '../css/diary.css';
 
 const Diary = () => {
@@ -41,7 +41,12 @@ const Diary = () => {
   };
 
   const handleNoteClick = (note) => {
-    setSelectedNote(prevNote => prevNote === note ? null : note);
+    if (selectedNote === note) {
+      // Deselect the note if already selected
+      setSelectedNote(null);
+    } else {
+      setSelectedNote(note);
+    }
   };
 
   const handleDeleteNote = (index) => {
@@ -53,6 +58,21 @@ const Diary = () => {
   const getImagePreview = (image) => {
     return image ? URL.createObjectURL(image) : null;
   };
+
+  // Handle deselecting note when clicking outside selected note area
+  useEffect(() => {
+    const handleClickOutsideNote = (e) => {
+      if (!e.target.closest('.selected-note')) {
+        setSelectedNote(null);
+      }
+    };
+
+    document.addEventListener('click', handleClickOutsideNote);
+
+    return () => {
+      document.removeEventListener('click', handleClickOutsideNote);
+    };
+  }, []);
 
   return (
     <div className="main-content">
@@ -92,7 +112,7 @@ const Diary = () => {
       </aside>
       <div className="note-details-container">
         <div className="note-details">
-          {selectedNote && (
+          {selectedNote ? (
             <div className="selected-note">
               <h3>{selectedNote.title}</h3>
               <p>{selectedNote.body}</p>
@@ -103,6 +123,10 @@ const Diary = () => {
                   className="note-image"
                 />
               )}
+            </div>
+          ) : (
+            <div className="select-note-box">
+              <p className="select-note">Select a note to view details</p>
             </div>
           )}
         </div>

@@ -1,18 +1,15 @@
 /* Main content area */
 .main-content {
   display: flex;
-  padding: 80px;
+  padding: 20px;
   margin: 0 auto;
   max-width: 1200px;
   justify-content: space-between;
-  background-color: #fff;
-
-
 }
 
 /* Side box */
 .side-box {
-  width: 250%;
+  width: 90%;
   background-color: #ccd5ae;
   padding: 20px;
   border: 3px solid #6C584C;
@@ -38,7 +35,7 @@
 }
 
 .side-box form textarea {
-  height: 450px;
+  height: 500px;
   resize: vertical;
 }
 
@@ -102,34 +99,30 @@
   cursor: pointer;
   position: relative;
   font-family: 'Readex Pro', sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .note-container h3 {
   margin-bottom: 5px;
   font-size: 18px;
   color: #6C584C;
-  flex-grow: 1;
 }
 
 .note-container button {
   background-color: #6C584C;
   color: #fff;
   border: none;
-  padding: 5px 10px; /* Adjusted padding */
+  padding: 5px 10px;
   cursor: pointer;
+  position: absolute;
+  top: 5px; /* Adjusted to position the button correctly */
+  right: 5px; /* Adjusted to position the button correctly */
   border-radius: 5px;
-  font-size: 12px; /* Adjusted font size */
-  margin-left: 10px;
+  font-size: 12px; /* Reduced font size for a smaller button */
 }
 
 .note-container button:hover {
   background-color: #5C8444;
 }
-
-
 
 /* Media queries */
 @media (max-width: 992px) {
@@ -145,32 +138,6 @@
     margin-bottom: 20px;
   }
 }
-
-
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  color: #6C584C;
-  padding: 10px 0;
-  text-align: center;
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-}
-
-
-footer {
-  position: fixed;
-  bottom: 0;
-}
-
-
-
-
-
 
 @media (max-width: 576px) {
   .side-box,
@@ -197,8 +164,8 @@ footer {
   }
 
   .note-container button {
-    padding: 5px 10px; /* Adjusted padding */
-    font-size: 10px; /* Adjusted font size */
+    padding: 4px 8px;
+    font-size: 10px; /* Further reduce font size for smaller screens */
   }
 
   .selected-note h3 {

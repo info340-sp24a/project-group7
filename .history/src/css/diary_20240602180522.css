@@ -129,8 +129,6 @@
   background-color: #5C8444;
 }
 
-
-
 /* Media queries */
 @media (max-width: 992px) {
   .main-content {
@@ -145,32 +143,6 @@
     margin-bottom: 20px;
   }
 }
-
-
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  color: #6C584C;
-  padding: 10px 0;
-  text-align: center;
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-}
-
-
-footer {
-  position: fixed;
-  bottom: 0;
-}
-
-
-
-
-
 
 @media (max-width: 576px) {
   .side-box,

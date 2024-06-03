@@ -1,19 +1,16 @@
 /* Main content area */
 .main-content {
   display: flex;
-  padding: 80px;
+  padding: 20px;
   margin: 0 auto;
   max-width: 1200px;
   justify-content: space-between;
-  background-color: #fff;
-
-
 }
 
 /* Side box */
 .side-box {
-  width: 250%;
-  background-color: #ccd5ae;
+  width: 90%;
+  background-color: #283208;
   padding: 20px;
   border: 3px solid #6C584C;
   border-radius: 20px;
@@ -38,7 +35,7 @@
 }
 
 .side-box form textarea {
-  height: 450px;
+  height: 500px;
   resize: vertical;
 }
 
@@ -129,8 +126,6 @@
   background-color: #5C8444;
 }
 
-
-
 /* Media queries */
 @media (max-width: 992px) {
   .main-content {
@@ -145,32 +140,6 @@
     margin-bottom: 20px;
   }
 }
-
-
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  color: #6C584C;
-  padding: 10px 0;
-  text-align: center;
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-}
-
-
-footer {
-  position: fixed;
-  bottom: 0;
-}
-
-
-
-
-
 
 @media (max-width: 576px) {
   .side-box,
