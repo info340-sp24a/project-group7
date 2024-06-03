@@ -336,7 +336,7 @@ footer {
 .add-event-header .close {
   font-size: 1.5rem;
   cursor: pointer;
-  width: 5px;
+  border: 0;
   color: #5C8444;
   background-color: #fff;
 }
