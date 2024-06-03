@@ -1,10 +1,12 @@
-const plantData = 
-[
+/* Ref for search/filter data: https://www.youtube.com/watch?v=xAqCEBFGdYk */
+
+const plantData =
+  [
     {
       "plant_name": "spider plant",
       "light_requirement": "medium light",
       "watering_frequency": "once every two weeks",
-      "humidity_preference": "high humidity", 
+      "humidity_preference": "high humidity",
       "growth_rate": "moderate",
       "pot_size": "6 inches",
       "soil_type": "well-draining soil",
@@ -36,7 +38,7 @@ const plantData =
       "watering_frequency": "once a week",
       "humidity_preference": "medium humidity",
       "growth_rate": "moderate",
-      "pot_size": "8 inches", 
+      "pot_size": "8 inches",
       "soil_type": "peat-based soil",
       "toxicity_level": "toxic"
     },
@@ -102,4 +104,4 @@ const plantData =
     }
   ]
 
-  export default plantData;
+export default plantData;

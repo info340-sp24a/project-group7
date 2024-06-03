@@ -1,3 +1,6 @@
+/* Ref: https://dev.to/asimdahall/simple-search-form-in-react-using-hooks-42pg 
+https://medium.com/@stheodorejohn/implementing-dynamic-search-functionality-in-react-2d30e8971e0e */
+
 import React, { useState } from 'react';
 import { Row, Col, Button, Spinner } from 'react-bootstrap';
 import '../css/searchfilter.css';
@@ -62,6 +65,9 @@ const SearchFilter = ({ onSearch }) => {
   const categories = ['Monstera', 'Pothos', 'Spider Plant', 'Snake Plant', 'Cat Palm', 'Chinese Evergreen', 'Dracaena', 'ZZ Plant'];
   const lightRequirements = ['Low Light', 'Medium Light', 'Bright Light'];
   const wateringFrequencies = ['Low', 'Medium', 'High'];
+
+  /* Ref: https://react-bootstrap.github.io/docs/components/buttons
+  https://react-bootstrap.github.io/docs/components/dropdowns*/
 
   return (
     <Row className="search-filter-container justify-content-center text-center">
