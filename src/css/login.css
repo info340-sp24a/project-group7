@@ -4,6 +4,22 @@ body {
   padding: 0;
 }
 
+.sign-out-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #5b8444;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.sign-out-btn:hover {
+  background-color: #4a6e37;
+}
+
 .login-body {
   display: flex;
   height: 100vh;
