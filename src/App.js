@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import SideNav from './components/Sidenav';
+import Navbar from './components/Navbar'; // Ensure correct import path
 import PlantGallery from './components/index';
 import Plant from './components/plantinfo';
 import Calendar from './components/calendar';
@@ -21,32 +20,22 @@ function App() {
     };
 
     return (
-        <div className="app-container">
+        <>
             {/* Main Navigation Bar */}
             <Navbar />
 
-            {/* Media Query Navigation Bar */}
-            <SideNav />
-
-            <div className="content-wrapper">
-                <Routes>
-                    {/* Render SearchFilter only on the index page */}
-                    <Route path="/" element={<>
-                        <PlantGallery plants={filteredPlants} />
-                        <SearchFilter onSearch={handleSearch} />
-                    </>} />
-                    <Route path="/search" element={<SearchFilter onSearch={handleSearch} />} />
-                    <Route path="/plantbio" element={<Plant />} />
-                    <Route path="/calendar" element={<Calendar />} />
-                    <Route path="/diary" element={<Diary />} />
-                    <Route path="/signin" element={<Signin />} />
-                </Routes>
-            </div>
+            <Routes>
+                <Route path="/" element={<PlantGallery />} />
+                <Route path="/plantbio" element={<Plant />} />
+                <Route path="/calendar" element={<Calendar />} />
+                <Route path="/diary" element={<Diary />} />
+                <Route path="/signin" element={<Signin />} />
+            </Routes>
 
             <footer>
                 <p>&copy; Plant Parenthood</p>
             </footer>
-        </div>
+        </>
     );
 }
 

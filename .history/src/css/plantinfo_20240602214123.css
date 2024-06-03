@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Readex Pro';
+}
+
+h1 {
+  color: #5C8444;
+}
+
+h2 {
+  color: #5b8444;
+}
+
+h3 {
+  color: #CCD5AE
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.plant-title,
+.main-plant,
+.plant-care {
+  width: 100%;
+  /* Set width to 100% for stacking */
+  margin-right: 0;
+  /* Remove margin-right for stacking */
+  float: none;
+  /* Remove float for stacking */
+  margin-top: 10px;
+  /* Add margin to the top of each section for spacing */
+}
+
+
+.plant-title {
+  padding: 20px;
+  border-radius: 5px;
+  margin-right: 0;
+  /* Reset margin-right for first column */
+}
+
+.plant-blurb {
+  margin: 5px 0 0;
+  font-size: 14px;
+}
+
+.main-plant {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+.plant-image img {
+  max-width: 100%;
+  /* Ensures the image does not exceed its container's width */
+  height: auto;
+  /* Maintains the image's aspect ratio */
+  display: block;
+  /* Ensures the image is displayed as a block element */
+  margin: 0 auto;
+  /* Centers the image horizontally within its container */
+}
+
+
+.plant-care {
+  padding: 20px;
+  border-radius: 5px;
+  margin-right: 0;
+  /* Reset margin-right for last column */
+}
+
+footer {
+  color: #6C584C;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  /* Center the text */
+}
+
+@media (min-width: 992px) {
+
+  .plant-title,
+  .main-plant,
+  .plant-care {
+    width: calc(33.33% - 20px);
+    /* 33.33% width for each column with 20px gap */
+    margin-right: 20px;
+    /* Gap between columns */
+    float: left;
+    /* Float left to create columns */
+    margin-top: 20px;
+    /* Add margin to the top of the first section */
+  }
+
+
+}
