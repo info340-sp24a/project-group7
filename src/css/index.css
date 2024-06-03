@@ -55,6 +55,7 @@ h2 {
   border: none;
   width: 20%; 
   background-color: #CCD5AE;
+  cursor: pointer;
 }
 
 .plant-gallery {
