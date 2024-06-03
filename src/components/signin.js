@@ -31,18 +31,6 @@ export default function Signin() {
                     <p class="welcome-message">Good to see you again</p>
                     <p class="message">Ready to check on your plants?</p>
                     <StyledFirebaseAuth uiConfig={firebaseUIConfig} firebaseAuth={auth} />
-
-                    {/* <form>
-                        <!-- Reference: https://www.w3schools.com/howto/howto_css_login_form.asp -->
-                        <input class="login-input-text-email" type="email" name="email" placeholder="Email" required />
-                        <input class="login-input-text-password" type="password" name="password" placeholder="Password" required />
-                        <div class="remember-container">
-                            <label><input type="checkbox" class="remember-checkbox" />&nbsp;Remember Me</label>
-                            <a href="#">Forgot Password?</a>
-                        </div>
-                        <button type="submit">Login</button>
-                    </form>
-                    <p class="signup-message">Don't have an account? <a href="#">Sign up here</a></p> */}
                 </div>
             </div>
             <div class="image-section">
