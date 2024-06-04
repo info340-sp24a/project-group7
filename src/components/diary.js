@@ -1,23 +1,25 @@
 // sources(https://www.w3schools.com/react/react_usestate.asp)
 // https://www.shecodes.io/athena/8476-how-to-prevent-return-until-submit-is-clicked-in-react-js
-
 import React, { useState, useEffect } from 'react';
 import '../css/diary.css';
 import { getDatabase, ref, onValue, set, push } from 'firebase/database';
 import { getAuth } from 'firebase/auth';
+import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from 'firebase/storage';
 
 const Diary = () => {
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
   const [image, setImage] = useState(null);
   const [notes, setNotes] = useState([]);
-  const [selectedNote, setSelectedNote] = useState(null);
+  const [selectedNoteId, setSelectedNoteId] = useState(null);
   const [color, setColor] = useState('#ffffff');
+  const [loading, setLoading] = useState(false);
 
   const auth = getAuth();
   const user = auth.currentUser;
 
   const db = getDatabase();
+  const storage = getStorage();
   const notesRef = ref(db, `notes/${user?.uid}`);
 
   useEffect(() => {
@@ -42,24 +44,36 @@ const Diary = () => {
     else if (name === 'color') setColor(value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (title && body) {
+      setLoading(true);
+      let imageUrl = '';
+      if (image) {
+        const imageRef = storageRef(storage, `images/${user.uid}/${image.name}`);
+        await uploadBytes(imageRef, image);
+        imageUrl = await getDownloadURL(imageRef);
+      }
+
       const noteRef = push(notesRef);
-      const newNote = { title, body, image, color };
+      const newNote = { title, body, image: imageUrl, color };
       set(noteRef, newNote)
         .then(() => {
           setTitle('');
           setBody('');
           setImage(null);
           setColor('#ffffff');
+          setLoading(false);
         })
-        .catch((error) => console.error('Error adding note: ', error));
+        .catch((error) => {
+          console.error('Error adding note: ', error);
+          setLoading(false);
+        });
     }
   };
 
-  const handleNoteClick = (note) => {
-    setSelectedNote(prevNote => prevNote === note ? null : note);
+  const handleNoteClick = (noteId) => {
+    setSelectedNoteId(prevNoteId => prevNoteId === noteId ? null : noteId);
   };
 
   const handleDeleteNote = (noteToDelete) => {
@@ -106,43 +120,45 @@ const Diary = () => {
             value={color}
             onChange={handleChange}
           />
-          <button type="submit">Add Note</button>
+          <button type="submit" disabled={loading}>
+            {loading ? 'Adding Note...' : 'Add Note'}
+          </button>
         </form>
       </aside>
       <div className="note-details-container">
-        <div className="note-details">
-          {selectedNote && (
-            <div className="selected-note">
-              <h3>{selectedNote.title}</h3>
-              <p>{selectedNote.body}</p>
-              {selectedNote.image && (
-                <img
-                  src={getImagePreview(selectedNote.image)}
-                  alt="Note"
-                  className="note-image"
-                />
-              )}
-            </div>
-          )}
-        </div>
         <div className="notes-list">
           {notes.map((note, index) => (
-            <div
-              key={index}
-              className="note-container"
-              style={{ backgroundColor: note.color }}
-              onClick={() => handleNoteClick(note)}
-            >
-              <h3>{note.title}</h3>
-              <button
-                className="delete-button"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  handleDeleteNote(note);
-                }}
+            <div key={index} className="note-wrapper">
+              <div
+                className={`note-container ${selectedNoteId === note.id ? 'open' : ''}`}
+                style={{ backgroundColor: note.color }}
+                onClick={() => handleNoteClick(note.id)}
               >
-                Delete
-              </button>
+                <h3>{note.title}</h3>
+                <button
+                  className="delete-button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleDeleteNote(note);
+                  }}
+                >
+                  Delete
+                </button>
+              </div>
+              <div className={`note-details ${selectedNoteId === note.id ? 'open' : ''}`}>
+                {selectedNoteId === note.id && (
+                  <div className="selected-note">
+                    <p>{note.body}</p>
+                    {note.image && (
+                      <img
+                        src={note.image}
+                        alt="Note"
+                        className="note-image"
+                      />
+                    )}
+                  </div>
+                )}
+              </div>
             </div>
           ))}
         </div>
