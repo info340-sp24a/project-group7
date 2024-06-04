@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../css/main.css'; // Import the CSS file
+import '../css/main.css'; 
 import '../css/index.css';
 import SearchFilter from '../components/SearchFilter.js';
 

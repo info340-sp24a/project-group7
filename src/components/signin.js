@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import '../css/main.css'; // Import the CSS file
+import '../css/main.css'; 
 import '../css/login.css';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import { getAuth, EmailAuthProvider, GoogleAuthProvider, onAuthStateChanged, signOut } from 'firebase/auth';

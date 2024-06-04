@@ -1,6 +1,6 @@
 import React from 'react';
-import '../css/main.css'; // Import the CSS file
-import '../css/plantinfo.css'; // Import the CSS file
+import '../css/main.css'; 
+import '../css/plantinfo.css'; 
 
 export default function Plant() {
   return (
