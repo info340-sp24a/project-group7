@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar'; // Ensure correct import path
 import PlantGallery from './components/index';
-import Plant from './components/plantinfo';
 import Calendar from './components/calendar';
 import Diary from './components/diary';
 import Signin from './components/signin';
@@ -36,7 +35,6 @@ function App() {
 
             <Routes>
                 <Route path="/" element={<PlantGallery onSearch={handleSearch} filteredPlants={filteredPlants} setFilteredPlants={setFilteredPlants} />} />
-                <Route path="/plantbio" element={<Plant />} />
                 <Route path="/calendar" element={user ? <Calendar /> : <Navigate to="/signin" />} />
                 <Route path="/diary" element={user ? <Diary /> : <Navigate to="/signin" />} />
                 <Route path="/signin" element={<Signin />} />
