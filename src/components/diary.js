@@ -3,6 +3,8 @@
 
 import React, { useState, useEffect } from 'react';
 import '../css/diary.css';
+import { getDatabase, ref, onValue, set, push } from 'firebase/database';
+import { getAuth } from 'firebase/auth';
 
 const Diary = () => {
   const [title, setTitle] = useState('');
@@ -12,16 +14,25 @@ const Diary = () => {
   const [selectedNote, setSelectedNote] = useState(null);
   const [color, setColor] = useState('#ffffff');
 
-  useEffect(() => {
-    const storedNotes = localStorage.getItem('notes');
-    if (storedNotes) {
-      setNotes(JSON.parse(storedNotes));
-    }
-  }, []);
+  const auth = getAuth();
+  const user = auth.currentUser;
+
+  const db = getDatabase();
+  const notesRef = ref(db, `notes/${user?.uid}`);
 
   useEffect(() => {
-    localStorage.setItem('notes', JSON.stringify(notes));
-  }, [notes]);
+    if (user) {
+      onValue(notesRef, (snapshot) => {
+        const data = snapshot.val();
+        if (data) {
+          const notesArray = Object.keys(data).map(key => ({ id: key, ...data[key] }));
+          setNotes(notesArray);
+        } else {
+          setNotes([]);
+        }
+      });
+    }
+  }, [user, notesRef]);
 
   const handleChange = (e) => {
     const { name, value, files } = e.target;
@@ -34,12 +45,16 @@ const Diary = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (title && body) {
+      const noteRef = push(notesRef);
       const newNote = { title, body, image, color };
-      setNotes([...notes, newNote]);
-      setTitle('');
-      setBody('');
-      setImage(null);
-      setColor('#ffffff');
+      set(noteRef, newNote)
+        .then(() => {
+          setTitle('');
+          setBody('');
+          setImage(null);
+          setColor('#ffffff');
+        })
+        .catch((error) => console.error('Error adding note: ', error));
     }
   };
 
@@ -47,10 +62,11 @@ const Diary = () => {
     setSelectedNote(prevNote => prevNote === note ? null : note);
   };
 
-  const handleDeleteNote = (index) => {
-    const updatedNotes = notes.filter((_, i) => i !== index);
-    setNotes(updatedNotes);
-    if (selectedNote === notes[index]) setSelectedNote(null);
+  const handleDeleteNote = (noteToDelete) => {
+    const noteRef = ref(db, `notes/${user.uid}/${noteToDelete.id}`);
+    set(noteRef, null)
+      .then(() => console.log('Note deleted successfully'))
+      .catch((error) => console.error('Error deleting note: ', error));
   };
 
   const getImagePreview = (image) => {
@@ -122,7 +138,7 @@ const Diary = () => {
                 className="delete-button"
                 onClick={(e) => {
                   e.stopPropagation();
-                  handleDeleteNote(index);
+                  handleDeleteNote(note);
                 }}
               >
                 Delete
