@@ -72,10 +72,10 @@ const SearchFilter = ({ onSearch }) => {
   return (
     <Row className="search-filter-container justify-content-center text-center">
       <div className='all-col'>
-        <Col md={3}>
+        <Col >
           <div className="dropdown">
             <Button className="dropdown-toggle" onClick={() => setShowCategoryDropdown(!showCategoryDropdown)}>
-              Common Plants
+              Plants
             </Button>
             {showCategoryDropdown && (
               <div className="dropdown-menu show">
@@ -96,7 +96,7 @@ const SearchFilter = ({ onSearch }) => {
             )}
           </div>
         </Col>
-        <Col md={3}>
+        <Col >
           <div className="dropdown">
             <Button className="dropdown-toggle" onClick={() => setShowLightDropdown(!showLightDropdown)}>
               Sunlight
@@ -120,7 +120,7 @@ const SearchFilter = ({ onSearch }) => {
             )}
           </div>
         </Col>
-        <Col md={3}>
+        <Col >
           <div className="dropdown">
             <Button className="dropdown-toggle" onClick={() => setShowWateringDropdown(!showWateringDropdown)}>
               Watering
@@ -144,7 +144,7 @@ const SearchFilter = ({ onSearch }) => {
             )}
           </div>
         </Col>
-        <Col md={3}>
+        <Col >
           {isLoading ? (
             <Spinner animation="border" role="status">
               <span className="visually-hidden">Loading...</span>
