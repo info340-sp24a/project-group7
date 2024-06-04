@@ -140,7 +140,7 @@ footer {
   }
 
   .card {
-    width: calc(50% - 20px); /* Adjust width of cards */
+    width: calc(50% - 20px); 
   }
 }
 
@@ -158,6 +158,6 @@ footer {
   }
 
   .card {
-    width: calc(33.33% - 20px); /* Adjust width of cards */
+    width: calc(33.33% - 20px); 
   }
 }

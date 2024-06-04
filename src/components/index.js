@@ -114,8 +114,8 @@ export default function PlantGallery() {
           value={searchTerm}
           onChange={handleSearchInput}
         />
-        <button id="searchBtn" onClick={() => handleSearch(searchTerm, [], [], [])}>Search</button>
-        <button id="resetBtn" onClick={handleResetClick}>All</button>
+        <button aria-label='search-button' id="searchBtn" onClick={() => handleSearch(searchTerm, [], [], [])}>Search</button>
+        <button aria-label='reset-to-all-button' id="resetBtn" onClick={handleResetClick}>All</button>
       </section>
 
       <section className="plant-gallery">

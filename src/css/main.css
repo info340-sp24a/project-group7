@@ -59,7 +59,7 @@
 }
 
 .mobile-nav.open {
-  width: 100%; /* Adjust width as needed */
+  width: 100%; 
 }
 
 .mobile-nav a {
@@ -140,7 +140,7 @@
   }
 
   .navbar ul li a:hover {
-      color: #CCD5AE; /* Change color on hover */
+      color: #CCD5AE; 
   }
 
   .mobile-nav {

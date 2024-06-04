@@ -74,7 +74,7 @@ const SearchFilter = ({ onSearch }) => {
       <div className='all-col'>
         <Col >
           <div className="dropdown">
-            <Button className="dropdown-toggle" onClick={() => setShowCategoryDropdown(!showCategoryDropdown)}>
+            <Button aria-label='plant-filter' className="dropdown-toggle" onClick={() => setShowCategoryDropdown(!showCategoryDropdown)}>
               Plants
             </Button>
             {showCategoryDropdown && (
@@ -98,7 +98,7 @@ const SearchFilter = ({ onSearch }) => {
         </Col>
         <Col >
           <div className="dropdown">
-            <Button className="dropdown-toggle" onClick={() => setShowLightDropdown(!showLightDropdown)}>
+            <Button aria-label='sunlight-filter' className="dropdown-toggle" onClick={() => setShowLightDropdown(!showLightDropdown)}>
               Sunlight
             </Button>
             {showLightDropdown && (
@@ -122,7 +122,7 @@ const SearchFilter = ({ onSearch }) => {
         </Col>
         <Col >
           <div className="dropdown">
-            <Button className="dropdown-toggle" onClick={() => setShowWateringDropdown(!showWateringDropdown)}>
+            <Button aria-label='water-filter' className="dropdown-toggle" onClick={() => setShowWateringDropdown(!showWateringDropdown)}>
               Watering
             </Button>
             {showWateringDropdown && (
@@ -150,7 +150,7 @@ const SearchFilter = ({ onSearch }) => {
               <span className="visually-hidden">Loading...</span>
             </Spinner>
           ) : (
-            <Button className='filter-btn' variant="primary" onClick={handleApplyFilters}>
+            <Button aria-label='apply-filter' className='filter-btn' variant="primary" onClick={handleApplyFilters}>
               Apply Filters
             </Button>
           )}

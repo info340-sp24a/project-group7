@@ -120,7 +120,7 @@ const Diary = () => {
             value={color}
             onChange={handleChange}
           />
-          <button type="submit" disabled={loading}>
+          <button aria-label='add-note' type="submit" disabled={loading}>
             {loading ? 'Adding Note...' : 'Add Note'}
           </button>
         </form>
@@ -137,6 +137,7 @@ const Diary = () => {
                 <h3>{note.title}</h3>
                 <button
                   className="delete-button"
+                  aria-label='delete-note'
                   onClick={(e) => {
                     e.stopPropagation();
                     handleDeleteNote(note);
