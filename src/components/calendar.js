@@ -1,3 +1,7 @@
+/* References:
+    Calendar: https://www.youtube.com/watch?v=u_ocJEv6c4Q&ab_channel=OpenSourceCoding
+    Event Form: https://www.youtube.com/watch?v=r1devGCrm2Y&t=418s&ab_channel=OpenSourceCoding */
+
 import React, { useState } from 'react';
 import '../css/main.css'; 
 import '../css/calendar.css';
